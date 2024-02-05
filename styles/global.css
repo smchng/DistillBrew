@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Josefin";
+  src: url("../public/fonts/JosefinSans-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "JosefinLight";
+  src: url("../public/fonts/JosefinSans-Light.ttf") format("opentype");
+}
+@font-face {
+  font-family: "JosefinSemiBold";
+  src: url("../public/fonts/JosefinSans-SemiBold.ttf") format("opentype");
+  /* Add more src declarations for different font formats if necessary */
+}
+@font-face {
+  font-family: "JosefinBold";
+  src: url("../public/fonts/JosefinSans-Medium.ttf") format("opentype");
+  /* Add more src declarations for different font formats if necessary */
+}
+
+h1 {
+  font-family: "JosefinBold", sans-serif;
+  @apply text-xl;
+}
+
+h2 {
+  font-family: "JosefinBold", sans-serif;
+  @apply text-lg;
+}
+
+h3 {
+  font-family: "JosefinSemiBold", sans-serif;
+  @apply text-base;
+}
+
+body {
+  font-family: "Josefin", sans-serif;
+  @apply text-base;
+}
+
+p {
+  font-family: "JosefinLight", sans-serif;
+  @apply text-sm;
+}
+
+a {
+  font-family: "JosefinSemiBold", sans-serif !important;
+  @apply text-2xs;
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}*/
+
+body {
+  /* color: #f1f1f1; */
+  background: #f1f1f1;
+}
+/* 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
