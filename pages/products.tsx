@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import front from "@/public/imgs/outer.png";
-import machine from "@/public/imgs/siphon.webp";
+import machine from "@/public/imgs/siphon.png";
 
 export default function Products() {
   return (
