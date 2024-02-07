@@ -1,29 +1,55 @@
 import Image from "next/image";
+import { Product } from "@/components/product/product";
 
-import front from "@/public/imgs/outer.png";
+import set from "@/public/imgs/fullset.png";
 import machine from "@/public/imgs/siphon.png";
+import paddle from "@/public/imgs/paddle.png";
+import filter from "@/public/imgs/filter.png";
 
 export default function Products() {
   return (
     <div>
-      <div>
-        <Image
-          src={front}
-          alt="Outer Image"
-          className="h-screen object-cover"
-        />
-      </div>
+      <Product
+        image={set}
+        alt="Outer Image"
+        link="/products/set"
+        stylingClasses1="bg-white relative"
+        stylingClasses2="h-screen object-cover"
+        name="Siphon Set"
+      />
+
       <div className="flex">
         <div className=" flex-1">
-          <Image
-            src={machine}
-            alt="Outer Image"
-            className="bg-peach w-full h-full object-cover"
-          />
+          <div className="bg-peach w-full h-full ">
+            <Product
+              image={machine}
+              alt="Outer Image"
+              link="/products/set"
+              stylingClasses1="bg-peach w-full h-full relative"
+              stylingClasses2="w-full h-full object-cover"
+              name="Machine"
+            />
+          </div>
         </div>
         <div className="flex-1">
-          <Image src={machine} alt="Outer Image" className="" />
-          <Image src={machine} alt="Outer Image" className="" />
+          <div>
+            <Product
+              image={paddle}
+              alt="Outer Image"
+              link="/products/set"
+              stylingClasses1="bg-mocha relative"
+              name="Paddle"
+            />
+          </div>
+          <div>
+            <Product
+              image={filter}
+              alt="Outer Image"
+              link="/products/set"
+              stylingClasses1="bg-white relative"
+              name="Filter"
+            />
+          </div>
         </div>
       </div>
     </div>

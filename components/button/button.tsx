@@ -6,9 +6,10 @@ type ButtonProp = {
 };
 
 export const FullButton = ({ text, link }: ButtonProp) => {
+  const resolvedLink = link !== undefined ? link : "";
   return (
     <div className="mt-2 hover:bg-brown border border-white rounded-full border-[1.5px] px-5 pb-1 leading-none">
-      <Link href={link} className="text-white">
+      <Link href={resolvedLink} className="text-white">
         {text}
       </Link>
     </div>

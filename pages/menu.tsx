@@ -6,11 +6,11 @@ import front from "@/public/imgs/outer.png";
 
 export default function Home() {
   const MenuItem = [
-    { item: "Shop", link: "/products" },
-    { item: "About", link: "/about" },
-    { item: "How To", link: "/howTo" },
-    { item: "What's New", link: "/blog" },
-    { item: "Contact", link: "/contact" },
+    { id: 1, item: "Shop", link: "/products" },
+    { id: 2, item: "About", link: "/about" },
+    { id: 3, item: "How To", link: "/howTo" },
+    { id: 4, item: "What's New", link: "/blog" },
+    { id: 5, item: "Contact", link: "/contact" },
   ];
 
   const isMenuPage = true; // Set this based on your logic
@@ -28,8 +28,9 @@ export default function Home() {
   return (
     <div className="grid grid-cols-2 ml-[5vw] h-[full]">
       <div className="flex flex-col justify-end mb-[8vh]">
-        {MenuItem.map((item, index) => (
+        {MenuItem.map((item) => (
           <Link
+            key={item.id}
             href={item.link}
             className="text-base text-brown mb-[3vh] hover:text-mocha"
           >
