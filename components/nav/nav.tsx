@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Bean } from "./nav_svg";
 import menu from "@/public/svg/menu.svg";
@@ -20,7 +21,7 @@ const Nav = () => {
             stylingClasses="z-50 absolute left-1/2 top-1/2 w-11 -translate-x-1/2 -translate-y-1/2 transform"
           />
         </Link>
-        <img
+        <Image
           src={menu.src}
           alt="Menu SVG"
           width={menu.width}

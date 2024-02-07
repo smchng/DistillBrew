@@ -5,17 +5,14 @@ import front from "@/public/imgs/outer.png";
 export default function About() {
   const AboutItems = [
     {
-      id: 1,
       title: "Innovation",
       text: "At the core of our company values is a relentless pursuit of innovation in the realm of coffee brewing. We are committed to pushing the boundaries of traditional methods, consistently introducing cutting-edge technologies and design enhancements to elevate the siphon coffee experience.",
     },
     {
-      id: 2,
       title: "Innovation",
       text: "At the core of our company values is a relentless pursuit of innovation in the realm of coffee brewing. We are committed to pushing the boundaries of traditional methods, consistently introducing cutting-edge technologies and design enhancements to elevate the siphon coffee experience.",
     },
     {
-      id: 3,
       title: "Innovation",
       text: "At the core of our company values is a relentless pursuit of innovation in the realm of coffee brewing. We are committed to pushing the boundaries of traditional methods, consistently introducing cutting-edge technologies and design enhancements to elevate the siphon coffee experience.",
     },
@@ -43,8 +40,8 @@ export default function About() {
       <section className="p-[3vw] h-screen m-auto content-center ">
         <h3 className="text-[40px]">Our Mission</h3>
         <div className="flex mt-[8vh] space-x-[50px]">
-          {AboutItems.map((item) => (
-            <div key={item.id}>
+          {AboutItems.map((item, index) => (
+            <div key={index}>
               <h3>{item.title}</h3>
               <p className="leading-none mt-[3vh]">{item.text}</p>
             </div>
