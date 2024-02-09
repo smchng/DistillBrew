@@ -1,5 +1,6 @@
 import Image from "next/image";
 import front from "@/public/imgs/outer.png";
+import siphon from "@/public/imgs/siphon.png"
 import { FullButton } from "@/components/button/button";
 
 export default function Home() {
@@ -20,11 +21,21 @@ export default function Home() {
           <FullButton text="SHOP NOW" link="/about" />
         </div>
       </section>
-      <section>
+      <section className="h-screen bg-black flex">
         <Image
-          src={front}
-          alt="Outer Image"
-          className="h-[100vh] object-cover"
+          src={siphon}
+          alt="siphon machine"
+          className="object-cover"
+        />
+        <Image
+          src={siphon}
+          alt="siphon machine"
+          className="object-cover"
+        />
+        <Image
+          src={siphon}
+          alt="siphon machine"
+          className="object-cover"
         />
       </section>
     </main>
