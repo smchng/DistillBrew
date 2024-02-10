@@ -13,7 +13,7 @@ export default function Products() {
         image={set}
         alt="Outer Image"
         link="/products/set"
-        stylingClasses1="bg-white relative"
+        stylingClasses1="bg-beige2 relative"
         stylingClasses2="h-screen object-cover"
         name="Siphon Set"
       />
@@ -25,8 +25,8 @@ export default function Products() {
               image={machine}
               alt="Outer Image"
               link="/products/set"
-              stylingClasses1="bg-peach w-full h-full relative"
-              stylingClasses2="w-full h-full object-cover"
+              stylingClasses1="bg-beige1 w-full h-full relative"
+              stylingClasses2=" object-cover"
               name="Machine"
             />
           </div>
@@ -37,7 +37,7 @@ export default function Products() {
               image={paddle}
               alt="Outer Image"
               link="/products/set"
-              stylingClasses1="bg-mocha relative"
+              stylingClasses1="bg-blue relative"
               name="Paddle"
             />
           </div>
@@ -46,7 +46,7 @@ export default function Products() {
               image={filter}
               alt="Outer Image"
               link="/products/set"
-              stylingClasses1="bg-white relative"
+              stylingClasses1="bg-matcha relative"
               name="Filter"
             />
           </div>
