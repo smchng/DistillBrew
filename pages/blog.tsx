@@ -1,9 +1,87 @@
-export default function Home() {
+import Image from "next/image";
+import front from "@/public/imgs/outer.png";
+import { BlogPost, Reviews } from "@/components/blog/blog";
+
+export default function Blog() {
+  const BlogItems = [
+    {
+      title: "TITLE",
+      text: "textetxetxtex",
+      link: "/about",
+      image: front,
+      alt: "img",
+    },
+    {
+      title: "TITLE",
+      text: "textetxetxtex",
+      link: "/about",
+      image: front,
+      alt: "img",
+    },
+    {
+      title: "TITLE",
+      text: "textetxetxtex",
+      link: "/about",
+      image: front,
+      alt: "img",
+    },
+  ];
+
+  const ReviewItems = [
+    {
+      text: "textetxetxtex",
+      link: "",
+      image: front,
+      alt: "img",
+    },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        TESTEST
+    <div className="bg-brown2 p-[5vw]">
+      <div className="relative mb-[10vh]">
+        <Image
+          src={front}
+          alt="location"
+          className=" object-cover rounded-[50px]"
+        />
+        <h2 className="absolute bottom-0 py-[8vw] px-[12vw] text-white max-w-[60vw] leading-none">
+          Denman location opening soon
+        </h2>
       </div>
-    </main>
+      <div>
+        <div>
+          <h2 className="text-white my-[3vh]">What's the haps</h2>
+        </div>
+        <div className="flex space-x-3">
+          {BlogItems.map((item, index) => (
+            <BlogPost
+              key={index}
+              title={item.title}
+              text={item.text}
+              image={item.image}
+              alt={item.alt}
+              link={item.link}
+            ></BlogPost>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div>
+          <h2 className="text-white my-[3vh] text-center">
+            Hear from our customers
+          </h2>
+        </div>
+        <div className="flex space-x-3">
+          {ReviewItems.map((item, index) => (
+            <Reviews
+              key={index}
+              text={item.text}
+              image={item.image}
+              alt={item.alt}
+              link={item.link}
+            ></Reviews>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
