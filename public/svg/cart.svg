@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.05 105.21">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #47290d;
+      }
+
+      .cls-2 {
+        font-family: JosefinSans-SemiBold, 'Josefin Sans';
+        font-size: 12px;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <circle class="cls-1" cx="24.43" cy="25.4" r=".88"/>
+    <circle class="cls-1" cx="26.72" cy="79.86" r=".88"/>
+    <circle class="cls-1" cx="78.3" cy="25.4" r=".88"/>
+    <circle class="cls-1" cx="80.79" cy="78.11" r=".88"/>
+    <text class="cls-2" transform="translate(39.59 22.46) rotate(-16.03)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-2" transform="translate(47.16 20.22) rotate(-2.05)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-2" transform="translate(55.09 19.9) rotate(11.6)"><tspan x="0" y="0">R</tspan></text>
+    <text class="cls-2" transform="translate(62.45 21.42) rotate(23.84)"><tspan x="0" y="0">T</tspan></text>
+    <text class="cls-2" transform="translate(22.46 65.57) rotate(-106.03)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-2" transform="translate(20.22 57.99) rotate(-92.05)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-2" transform="translate(19.9 50.07) rotate(-78.4)"><tspan x="0" y="0">R</tspan></text>
+    <text class="cls-2" transform="translate(21.41 42.7) rotate(-66.16)"><tspan x="0" y="0">T</tspan></text>
+    <text class="cls-2" transform="translate(65.46 82.76) rotate(163.97)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-2" transform="translate(57.89 84.99) rotate(177.95)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-2" transform="translate(49.96 85.31) rotate(-168.4)"><tspan x="0" y="0">R</tspan></text>
+    <text class="cls-2" transform="translate(42.6 83.8) rotate(-156.17)"><tspan x="0" y="0">T</tspan></text>
+    <text class="cls-2" transform="translate(82.6 39.64) rotate(73.97)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-2" transform="translate(84.83 47.22) rotate(87.95)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-2" transform="translate(85.15 55.14) rotate(101.6)"><tspan x="0" y="0">R</tspan></text>
+    <text class="cls-2" transform="translate(83.64 62.51) rotate(113.84)"><tspan x="0" y="0">T</tspan></text>
+  </g>
+</svg>
