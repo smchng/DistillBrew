@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Product } from "@/components/product/product";
 
 import set from "@/public/imgs/fullset.png";
@@ -24,7 +23,7 @@ export default function Products() {
             <Product
               image={machine}
               alt="Outer Image"
-              link="/products/set"
+              link="/products/machine"
               stylingClasses1="bg-beige1 w-full h-full relative"
               stylingClasses2=" object-cover"
               name="Machine"
@@ -36,7 +35,7 @@ export default function Products() {
             <Product
               image={paddle}
               alt="Outer Image"
-              link="/products/set"
+              link="/products/paddle"
               stylingClasses1="bg-blue relative"
               name="Paddle"
             />
@@ -45,7 +44,7 @@ export default function Products() {
             <Product
               image={filter}
               alt="Outer Image"
-              link="/products/set"
+              link="/products/filter"
               stylingClasses1="bg-matcha relative"
               name="Filter"
             />
