@@ -19,8 +19,8 @@ const Nav = () => {
         >
           <Link href="/menu">
             <Bean
-              fill={isBeanHovered ? "#391F06" : "white"}
-              iconFill={isBeanHovered ? "white" : "#391F06"}
+              fill={isBeanHovered ? "white" : "#391F06"}
+              iconFill={isBeanHovered ? "#391F06" : "white"}
               stylingClasses1="z-50 absolute left-1/2 top-1/2 w-11 -translate-x-1/2 -translate-y-1/2 transform"
               stylingClasses2="transition-colors"
             />
@@ -33,7 +33,7 @@ const Nav = () => {
             className="animate-spin animate-spin-slow "
           />
         </div>
-        <h3 className="text-white mx-auto font-semibold">DISTILL BREW CO.</h3>
+        <h3 className="text-brown mx-auto font-semibold">DISTILL BREW CO.</h3>
       </div>
       <div className="fixed bottom-0 right-0 z-50 p-[1vw] lg:p-[2vw]">
         <div
@@ -43,8 +43,8 @@ const Nav = () => {
         >
           <Link href="/cart">
             <Cart
-              fill={isCartHovered ? "#391F06" : "white"}
-              iconFill={isCartHovered ? "white" : "#391F06"}
+              fill={isCartHovered ? "white" : "#391F06"}
+              iconFill={isCartHovered ? "#391F06" : "white"}
               stylingClasses1=" z-50 absolute w-11 transform translate-x-8 -translate-y-1/2"
               stylingClasses2="transition-colors"
             />
