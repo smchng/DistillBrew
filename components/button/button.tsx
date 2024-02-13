@@ -4,13 +4,17 @@ import React, { useState } from "react";
 type ButtonProp = {
   text?: string;
   link?: string;
+  colour?: string;
+  textColour?: string;
 };
 
-export const FullButton = ({ text, link }: ButtonProp) => {
+export const FullButton = ({ text, link, colour, textColour }: ButtonProp) => {
   const resolvedLink = link !== undefined ? link : "";
   return (
-    <div className="mt-2 hover:bg-brown border border-white rounded-full border-[1.5px] px-5 pb-1 leading-none inline-block">
-      <Link href={resolvedLink} className="text-white">
+    <div
+      className={`${colour} mt-2 border rounded-full border-[1.5px] px-5 pb-1 leading-none inline-block transition-colors`}
+    >
+      <Link href={resolvedLink} className={textColour}>
         {text}
       </Link>
     </div>

@@ -26,8 +26,18 @@ export default function Cart() {
         </div>
       </div>
       <div>
-        <FullButton text="CONTINUE SHOPPING" link="/products" />
-        <FullButton text="CHECKOUT" link="/checkout" />
+        <FullButton
+          text="CONTINUE SHOPPING"
+          link="/products"
+          colour="border-brown hover:bg-brown"
+          textColour="text-brown hover:text-white"
+        />
+        <FullButton
+          text="CHECKOUT"
+          link="/checkout"
+          colour="bg-brown hover:bg-white"
+          textColour="text-white  hover:text-brown"
+        />
       </div>
     </div>
   );
