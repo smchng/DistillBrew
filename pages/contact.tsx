@@ -1,5 +1,5 @@
 import { Input, MessageInput } from "@/components/input/input";
-import { PlaceholderButton } from "@/components/button/button";
+import { FullButton } from "@/components/button/button";
 
 export default function Contact() {
   return (
@@ -13,7 +13,12 @@ export default function Contact() {
         <Input label="Email" type="text" />
       </div>
       <MessageInput label="Type your message here" type="text" />
-      <PlaceholderButton text="SEND" />
+      <FullButton
+        text="SEND"
+        link="/confirmation"
+        colour="border-matcha hover:bg-matcha"
+        textColour="text-matcha hover:text-white"
+      />
     </div>
   );
 }
