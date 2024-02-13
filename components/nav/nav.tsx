@@ -40,7 +40,7 @@ const Nav = () => {
           <Bean
             fill={isBeanHovered ? "white" : "#391F06"}
             iconFill={isBeanHovered ? "#391F06" : "white"}
-            stylingClasses1="z-50 absolute left-1/2 top-1/2 w-11 -translate-x-1/2 -translate-y-1/2 transform"
+            stylingClasses1="cursor-pointer z-50 absolute left-1/2 top-1/2 w-11 -translate-x-1/2 -translate-y-1/2 transform"
             stylingClasses2="transition-colors"
           />
 

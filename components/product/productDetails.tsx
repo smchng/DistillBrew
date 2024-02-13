@@ -34,7 +34,12 @@ export const ProductDetail = ({
             <p className="text-2xs">QUANTITY</p>
             <Toggle />
           </div>
-          <FullButton text="ADD TO CART" link="/cart" />
+          <FullButton
+            text="ADD TO CART"
+            link="/cart"
+            colour="bg-brown hover:bg-white"
+            textColour="text-white  hover:text-brown"
+          />
         </div>
       </div>
     </div>

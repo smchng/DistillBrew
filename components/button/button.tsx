@@ -35,7 +35,7 @@ export const Toggle = () => {
   };
 
   return (
-    <div className="mt-2 border border-brown rounded-full border-[1.5px] px-5 pt-1 leading-none inline-flex items-center">
+    <div className="mt-2 border border-brown rounded-full border-[1.5px] px-5 leading-none inline-block">
       <button className="text-brown text-xs " onClick={handleDecrease}>
         -
       </button>

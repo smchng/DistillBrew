@@ -19,7 +19,7 @@ export default function Home() {
           </p>
           <FullButton
             text="SHOP NOW"
-            link="/about"
+            link="/products"
             colour="hover:bg-brown"
             textColour="text-white"
           />
