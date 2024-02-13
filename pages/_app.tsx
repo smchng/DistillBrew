@@ -8,7 +8,6 @@ import Nav from "@/components/nav/nav";
 import Footer from "@/components/footer/footer";
 import Home from "@/pages/index";
 import About from "@/pages/about";
-import Menu from "@/pages/menu";
 import Contact from "@/pages/contact";
 import HowTo from "@/pages/howTo";
 import Products from "@/pages/products";
@@ -52,7 +51,6 @@ export default function App() {
         <section>
           {currentPage === "/" && <Home />}
           {currentPage === "/about" && <About />}
-          {currentPage === "/menu" && <Menu />}
           {currentPage === "/howTo" && <HowTo />}
           {currentPage === "/products" && <Products />}
           {currentPage === "/contact" && <Contact />}

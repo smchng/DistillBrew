@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useState } from "react";
 
 import front from "@/public/imgs/outer.png";
+interface MenuPageProps {
+  onClose: () => void;
+}
 
-export default function Home() {
+const Menu: React.FC<MenuPageProps> = ({ onClose }) => {
+  const [isOverlayVisible, setOverlayVisibility] = useState(true);
+
+  const handleOverlayClick = () => {
+    setOverlayVisibility(false);
+    onClose(); // Notify the parent component to close the menu page
+  };
   const MenuItem = [
     { item: "Shop", link: "/products" },
     { item: "About", link: "/about" },
@@ -13,24 +22,20 @@ export default function Home() {
     { item: "Contact", link: "/contact" },
   ];
 
-  const isMenuPage = true; // Set this based on your logic
-
-  useEffect(() => {
-    // Update the overflow property based on whether it's the menu page or not
-    document.body.style.overflow = isMenuPage ? "hidden" : "auto";
-
-    // Cleanup the effect
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isMenuPage]);
-
   return (
-    <div className="grid grid-cols-2 ml-[5vw] h-[full]">
+    <div
+      className={`grid grid-cols-2 ml-[5vw] h-[full] ${
+        isOverlayVisible
+          ? "transform transition-transform translate-y-0"
+          : "transform translate-y-full"
+      }`}
+    >
       <div className="flex flex-col justify-end mb-[8vh]">
+        {/* Your menu content */}
         {MenuItem.map((item, index) => (
           <Link
             key={index}
+            onClick={handleOverlayClick}
             href={item.link}
             className="text-base text-brown mb-[3vh] hover:text-mocha"
           >
@@ -41,4 +46,5 @@ export default function Home() {
       <Image src={front} alt="Outer Image" className="h-[100vh] object-cover" />
     </div>
   );
-}
+};
+export default Menu;
