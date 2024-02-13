@@ -32,7 +32,7 @@ const Nav = () => {
       )}
       <div className="flex items-center fixed top-0 left-0 w-full p-[5vw] lg:p-[2vw]">
         <div
-          className="relative"
+          className="relative cursor-pointer"
           onMouseEnter={() => setBeanHovered(true)}
           onMouseLeave={() => setBeanHovered(false)}
           onClick={handleToggleOverlay}
