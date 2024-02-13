@@ -3,7 +3,7 @@ import { Intruction } from "@/components/instruction";
 import { FullButton } from "@/components/button/button";
 
 import dSiphon from "@/public/imgs/3dSiphon.png";
-import siphon from "@/public/imgs/siphon.png";
+import siphon from "@/public/imgs/siphonInt.png";
 import bench from "@/public/imgs/bench.png";
 import chair from "@/public/imgs/chair.png";
 import front from "@/public/imgs/front.png";
