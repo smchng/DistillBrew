@@ -8,7 +8,7 @@ type BlogProps = {
   link: string;
   image: StaticImageData;
   alt: string;
-  stylingClasses: string;
+  stylingClasses?: string;
 };
 
 export const BlogPost = ({ title, text, link, image, alt }: BlogProps) => {
