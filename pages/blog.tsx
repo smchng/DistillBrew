@@ -36,20 +36,16 @@ export default function Blog() {
     },
   ];
   return (
-    <div className="bg-brown2 p-[5vw]">
-      <div className="relative mb-[10vh]">
-        <Image
-          src={front}
-          alt="location"
-          className=" object-cover rounded-[50px]"
-        />
+    <div className="">
+      <div className="relative my-[25vh]">
+        <Image src={front} alt="location" className=" object-cover " />
         <h2 className="absolute bottom-0 py-[8vw] px-[12vw] text-white max-w-[60vw] leading-none">
           Denman location opening soon
         </h2>
       </div>
       <div>
         <div>
-          <h2 className="text-white my-[3vh]">What's the haps</h2>
+          <h2 className="text-brown my-[3vh]">What's the haps</h2>
         </div>
         <div className="flex space-x-3">
           {BlogItems.map((item, index) => (
@@ -66,7 +62,7 @@ export default function Blog() {
       </div>
       <div>
         <div>
-          <h2 className="text-white my-[3vh] text-center">
+          <h2 className="text-brown my-[3vh] text-center">
             Hear from our customers
           </h2>
         </div>
