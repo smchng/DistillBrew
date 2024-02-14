@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Intruction } from "@/components/instruction";
+import { Intruction, InstructionDots } from "@/components/instruction";
 import { FullButton } from "@/components/button/button";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import dSiphon from "@/public/imgs/3dSiphon.png";
 import siphon from "@/public/imgs/siphonInt.png";
 import bench from "@/public/imgs/bench.png";
@@ -52,6 +52,43 @@ export default function Home() {
       });
     }
   };
+
+  // const nextSectionRef = useRef();
+  const [activeIndex, setActiveIndex] = useState(0);
+  // Scroll event listener to update the active index based on the scroll position
+  const handleDotScroll = () => {
+    const section = nextSectionRef.current;
+    if (section) {
+      const scrollPosition = window.scrollY;
+      let itemIndex = 0;
+
+      // Find the index of the section currently in view
+      for (let i = 0; i < instructionItem.length; i++) {
+        const currentSection = nextSectionRef.current.children[
+          i
+        ] as HTMLElement;
+
+        if (
+          currentSection.offsetTop <= scrollPosition &&
+          currentSection.offsetTop + currentSection.clientHeight >
+            scrollPosition
+        ) {
+          itemIndex = i;
+          break;
+        }
+      }
+
+      setActiveIndex(itemIndex);
+    }
+  };
+
+  // Attach the scroll event listener
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleDotScroll);
+    return () => {
+      window.removeEventListener("scroll", handleDotScroll);
+    };
+  }, []);
   return (
     <div>
       <div className="relative">
@@ -87,6 +124,10 @@ export default function Home() {
           />
         ))}
       </div>
+      <InstructionDots
+        totalItems={instructionItem.length}
+        activeIndex={activeIndex}
+      />
     </div>
   );
 }
