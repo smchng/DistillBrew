@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Intruction } from "@/components/instruction";
 import { FullButton } from "@/components/button/button";
-
+import { useState, useEffect, useRef } from "react";
 import dSiphon from "@/public/imgs/3dSiphon.png";
 import siphon from "@/public/imgs/siphonInt.png";
 import bench from "@/public/imgs/bench.png";
@@ -42,6 +42,16 @@ export default function Home() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
+  const nextSectionRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (nextSectionRef.current) {
+      window.scrollTo({
+        top: nextSectionRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div>
       <div className="relative">
@@ -50,23 +60,33 @@ export default function Home() {
           alt="Outer Image"
           className="h-screen object-cover"
         />
-        <div className="relative flex items-center justify-center h-full">
-          <div className="absolute max-w-[40vw] text-white leading-none text-center">
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
+          <div
+            onClick={handleScroll}
+            className="absolute max-w-[45vw] text-white leading-none text-center"
+          >
             <h1>Learn the art of siphon brewing</h1>
-            <FullButton text="SHOP NOW" link="/about" />
+            <FullButton
+              text="BEGIN YOUR JOURNEY"
+              // link="/about"
+              colour="hover:bg-brown"
+              textColour="text-white"
+            />
           </div>
         </div>
       </div>
-      {instructionItem.map((item, index) => (
-        <Intruction
-          key={index}
-          order={index + 1}
-          image={item.image}
-          alt={item.alt}
-          title={item.title}
-          text={item.text}
-        />
-      ))}
+      <div ref={nextSectionRef}>
+        {instructionItem.map((item, index) => (
+          <Intruction
+            key={index}
+            order={index + 1}
+            image={item.image}
+            alt={item.alt}
+            title={item.title}
+            text={item.text}
+          />
+        ))}
+      </div>
     </div>
   );
 }
