@@ -7,7 +7,7 @@ import machine from "@/public/imgs/siphon2.png";
 export default function Cart() {
   return (
     <div className="pt-[15vh]">
-      <h3 className="px-[5vw]">Cart</h3>
+      <h3 className="px-[5vw] text-brown">Cart</h3>
       <div>
         <CartItem image={machine} title="Siphon Machine" price="$145" />
         <CartItem image={machine} title="Siphon Machine" price="$145" />
