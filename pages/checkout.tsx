@@ -7,9 +7,10 @@ import {
   Rect,
   Header,
 } from "@/components/cart/item";
-import { FullButton } from "@/components/button/button";
-import React, { useState } from "react";
+import { FullButton, SubButton } from "@/components/button/button";
+import React, { useState, useRef, RefObject } from "react";
 import machine from "@/public/imgs/siphon2.png";
+import arrow from "@/public/svg/arrow.svg";
 
 export default function Checkout() {
   const [isCustomerVisible, setCustomerVisible] = useState(true);
@@ -30,10 +31,27 @@ export default function Checkout() {
   const customerNext = () => {
     setCustomerVisible(!isCustomerVisible);
     setContentVisible(!isContentVisible);
+    handleScrollToSection("delivery");
   };
-  const deliveryNext = () => {
-    setPaymentVisible(!isPaymentVisible);
+  const customerBack = () => {
+    setCustomerVisible(!isCustomerVisible);
     setContentVisible(!isContentVisible);
+    handleScrollToSection("customer");
+  };
+
+  const deliveryNext = () => {
+    setContentVisible(!isContentVisible);
+    setPaymentVisible(!isPaymentVisible);
+    handleScrollToSection("pay");
+  };
+
+  const sectionRef: RefObject<HTMLDivElement> = useRef(null);
+
+  const handleScrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -63,12 +81,19 @@ export default function Checkout() {
       </div>
       <div>
         <Rect />
-        <div>
+        <section ref={sectionRef} id="customer">
           <div
-            className="cursor-pointer text-brown"
+            className="cursor-pointer text-brown flex justify-between"
             onClick={handleCustomerToggle}
           >
             <Header title="customer information" />
+            <Image
+              src={arrow.src}
+              alt="arrow"
+              width={25}
+              height={25}
+              className={`mr-[4vw] ${isCustomerVisible ? "" : "rotate-180"}`}
+            />
           </div>
           {isCustomerVisible && (
             <div>
@@ -86,9 +111,8 @@ export default function Checkout() {
               </div>
               <div className="pb-[2vh] flex justify-center space-x-3">
                 <div onClick={customerNext}>
-                  <FullButton
+                  <SubButton
                     text="NEXT"
-                    //   link="/checkout"
                     colour="bg-brown hover:bg-white"
                     textColour="text-white  hover:text-brown"
                   />
@@ -96,14 +120,22 @@ export default function Checkout() {
               </div>
             </div>
           )}
-        </div>
+        </section>
         <Rect />
-        <div>
+        <section ref={sectionRef} id="delivery">
           <div
-            className="cursor-pointer text-brown"
+            className="cursor-pointer text-brown flex justify-between"
             onClick={handleContentToggle}
           >
             <Header title="delivery information" />
+
+            <Image
+              src={arrow.src}
+              alt="arrow"
+              width={25}
+              height={25}
+              className={`mr-[4vw] ${isContentVisible ? "" : "rotate-180"}`}
+            />
           </div>
           {isContentVisible && (
             <div>
@@ -136,19 +168,17 @@ export default function Checkout() {
                 />
               </div>{" "}
               <div className="pb-[2vh] flex justify-center space-x-3">
-                <div onClick={customerNext}>
+                <div onClick={customerBack}>
                   {" "}
-                  <FullButton
+                  <SubButton
                     text="BACK"
-                    // link="/products"
                     colour="border-brown hover:bg-brown"
                     textColour="text-brown hover:text-white"
                   />
                 </div>
                 <div onClick={deliveryNext}>
-                  <FullButton
+                  <SubButton
                     text="NEXT"
-                    //   link="/checkout"
                     colour="bg-brown hover:bg-white"
                     textColour="text-white  hover:text-brown"
                   />
@@ -156,14 +186,21 @@ export default function Checkout() {
               </div>
             </div>
           )}
-        </div>
+        </section>
         <Rect />
-        <div>
+        <section ref={sectionRef} id="pay">
           <div
-            className="cursor-pointer text-brown"
+            className="cursor-pointer text-brown flex justify-between"
             onClick={handlePaymentToggle}
           >
             <Header title="payment information" />
+            <Image
+              src={arrow.src}
+              alt="arrow"
+              width={25}
+              height={25}
+              className={`mr-[4vw] ${isPaymentVisible ? "" : "rotate-180"}`}
+            />
           </div>
           {isPaymentVisible && (
             <div>
@@ -193,7 +230,7 @@ export default function Checkout() {
               </div>
             </div>
           )}
-        </div>
+        </section>
         <Rect />
         {/* <div className=" flex justify-center">
           <FullButton

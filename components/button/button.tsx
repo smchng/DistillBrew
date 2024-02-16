@@ -11,12 +11,21 @@ type ButtonProp = {
 export const FullButton = ({ text, link, colour, textColour }: ButtonProp) => {
   const resolvedLink = link !== undefined ? link : "";
   return (
-    <div
-      className={`${colour} mt-2 border rounded-full border-[1.5px] px-5 pb-1 leading-none inline-block transition-colors`}
+    <Link
+      href={resolvedLink}
+      className={`${colour}  ${textColour} border rounded-full border-[1.5px] px-5 pt-1 inline-block transition-colors`}
     >
-      <Link href={resolvedLink} className={textColour}>
-        {text}
-      </Link>
+      {text}
+    </Link>
+  );
+};
+
+export const SubButton = ({ text, colour, textColour }: ButtonProp) => {
+  return (
+    <div
+      className={`${colour}  ${textColour} text-2xs border rounded-full border-[1.5px] px-5 pt-1 inline-block transition-colors`}
+    >
+      {text}
     </div>
   );
 };
