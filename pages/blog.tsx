@@ -1,28 +1,28 @@
 import Image from "next/image";
 import front from "@/public/imgs/outer.png";
 import { BlogPost, Reviews } from "@/components/blog/blog";
-// import Marquee from "react-marquee-line";
+import Marquee from "react-fast-marquee";
 
 export default function Blog() {
   const BlogItems = [
     {
       title: "TITLE",
       text: "textetxetxtex",
-      link: "/about",
+
       image: front,
       alt: "img",
     },
     {
       title: "TITLE",
       text: "textetxetxtex",
-      link: "/about",
+
       image: front,
       alt: "img",
     },
     {
       title: "TITLE",
       text: "textetxetxtex",
-      link: "/about",
+
       image: front,
       alt: "img",
     },
@@ -34,12 +34,26 @@ export default function Blog() {
       link: "",
       image: front,
       alt: "img",
-      title: "Freddie",
+      title: "Freddy",
+    },
+    {
+      text: "“Distill Brew’s Siphon has truly elevated my mornings.”",
+      link: "",
+      image: front,
+      alt: "img",
+      title: "Marianne",
+    },
+    {
+      text: "“I’m guaranteed a perfect cup of coffee every day with my Siphon.”",
+      link: "",
+      image: front,
+      alt: "img",
+      title: "Alex",
     },
   ];
   return (
     <div className="py-[20vh]">
-      <div className="relative">
+      <div className="relative h-screen">
         <Image
           src={front}
           alt="location"
@@ -62,7 +76,6 @@ export default function Blog() {
               text={item.text}
               image={item.image}
               alt={item.alt}
-              link={item.link}
             ></BlogPost>
           ))}
         </div>
@@ -73,19 +86,20 @@ export default function Blog() {
             Hear from our customers
           </h2>
         </div>
-        <div className="flex space-x-3">
-          {ReviewItems.map((item, index) => (
-            <Reviews
-              key={index}
-              title={item.title}
-              text={item.text}
-              image={item.image}
-              alt={item.alt}
-              link={item.link}
-              amount={5}
-            ></Reviews>
-          ))}
-        </div>
+        <Marquee className="overflow-visible p-16" autoFill>
+          <div className="flex">
+            {ReviewItems.map((item, index) => (
+              <Reviews
+                key={index}
+                title={item.title}
+                text={item.text}
+                image={item.image}
+                alt={item.alt}
+                amount={5}
+              ></Reviews>
+            ))}
+          </div>
+        </Marquee>
       </div>
     </div>
   );

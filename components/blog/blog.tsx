@@ -6,20 +6,19 @@ import star from "@/public/svg/star.svg";
 type BlogProps = {
   title?: string;
   text?: string;
-  link: string;
   image: StaticImageData;
   alt: string;
   stylingClasses?: string;
   amount?: number;
 };
 
-export const BlogPost = ({ title, text, link, image, alt }: BlogProps) => {
+export const BlogPost = ({ title, text, image, alt }: BlogProps) => {
   return (
     <div className="flex border border-brown rounded-2xl mb-[3vh] p-[1vw] gap-[5vw] relative">
       <div className="">
         <p>{title}</p>
         <p>{text}</p>{" "}
-        <Link href={link} className="items-end">
+        <Link href="/blogPost" className="items-end">
           Read more
         </Link>
       </div>
@@ -37,7 +36,7 @@ export const BlogPost = ({ title, text, link, image, alt }: BlogProps) => {
 export const Reviews = ({ amount, title, text, image, alt }: BlogProps) => {
   const numberOfStars = amount;
   return (
-    <div className="border border-brown rounded-2xl p-[1vw] w-[40vw] md:w-[20vw] relative  flex flex-col items-center text-center">
+    <div className="border border-brown rounded-2xl p-[1vw] w-[40vw]  mr-[2vw] md:w-[25vw] relative  flex flex-col items-center text-center">
       <div className="relative overflow-visible mt-[-3rem]">
         <Image
           src={image}
@@ -57,9 +56,9 @@ export const Reviews = ({ amount, title, text, image, alt }: BlogProps) => {
           />
         ))}
       </div>
-      <div className="mt-[1vh]">
+      <div className="mt-[1vh] flex flex-col">
         <p>{text}</p>
-        <p className="text-xs mt-[3vh]">{title}</p>
+        <p className="text-xs mt-auto items-end">{title}</p>
       </div>
     </div>
   );
