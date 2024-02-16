@@ -13,12 +13,14 @@ export default function Contact() {
         <Input label="Email" type="text" />
       </div>
       <MessageInput label="Type your message here" type="text" />
-      <FullButton
-        text="SEND"
-        link="/confirmation"
-        colour="border-matcha hover:bg-matcha"
-        textColour="text-matcha hover:text-white"
-      />
+      <div className="flex justify-end">
+        <FullButton
+          text="SEND"
+          link="/confirmation"
+          colour="border-matcha hover:bg-matcha"
+          textColour="text-matcha hover:text-white"
+        />
+      </div>
     </div>
   );
 }
