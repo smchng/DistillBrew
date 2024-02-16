@@ -1,21 +1,38 @@
 import { Product } from "@/components/product/product";
+import { FullButton } from "@/components/button/button";
+import Link from "next/link";
+import Image from "next/image";
 
 import set from "@/public/imgs/fullset.png";
 import machine from "@/public/imgs/siphon.png";
-import paddle from "@/public/imgs/paddle.png";
+import burner from "@/public/imgs/burner.png";
 import filter from "@/public/imgs/filter.png";
 
 export default function Products() {
   return (
     <div>
-      <Product
-        image={set}
-        alt="Outer Image"
-        link="/products/set"
-        stylingClasses1="bg-beige2 relative"
-        stylingClasses2="h-screen object-cover"
-        name="Siphon Set"
-      />
+      <div className="bg-beige2 relative h-screen object-cover overflow-hidden  flex items-center">
+        <Link href="/products/set">
+          <Image
+            src={set}
+            alt="Outer Image"
+            className="w-auto h-screen object-cover overflow-hidden relative left-[40vw]"
+          />
+        </Link>
+
+        <div className="absolute max-w-[40vw] pl-[10vw]">
+          <h2 className=" font-bold">
+            Siphon <br />
+            Set
+          </h2>
+          <FullButton
+            text="SHOP"
+            link="/products/set"
+            colour="bg-brown hover:bg-white"
+            textColour="text-white  hover:text-brown"
+          />
+        </div>
+      </div>
 
       <div className="sm:flex">
         <div className=" flex-1">
@@ -23,28 +40,30 @@ export default function Products() {
             image={machine}
             alt="Outer Image"
             link="/products/machine"
-            stylingClasses1="bg-beige1 relative object-cover"
-            stylingClasses2="w-full h-full object-cover"
+            stylingClasses1="bg-beige1 object-cover overflow-hidden relative"
+            stylingClasses2="w-full h-full object-cover overflow-hidden top-[50vh] drop-shadow-xl relative"
             name="Machine"
           />
         </div>
         <div className="flex-1 flex flex-col gap-0">
           <div className="flex-1">
             <Product
-              image={paddle}
-              alt="Outer Image"
-              link="/products/paddle"
-              stylingClasses1="w-full h-full bg-blue relative"
-              name="Paddle"
-            />
-          </div>
-          <div className="flex-1">
-            <Product
               image={filter}
               alt="Outer Image"
               link="/products/filter"
               stylingClasses1="w-full h-full bg-matcha relative"
+              stylingClasses2=" drop-shadow-xl"
               name="Filter"
+            />
+          </div>
+          <div className="flex-1">
+            <Product
+              image={burner}
+              alt="Outer Image"
+              link="/products/paddle"
+              stylingClasses1="w-full h-full bg-blue relative"
+              stylingClasses2=" drop-shadow-xl"
+              name="Paddle"
             />
           </div>
         </div>
