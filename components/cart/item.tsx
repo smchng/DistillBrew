@@ -95,7 +95,7 @@ export const InputWide = ({ title, id, type }: ItemProps) => {
 };
 
 export const Rect = () => {
-  return <div className="bg-white w-screen h-[2vh]"></div>;
+  return <div className="bg-white h-[2vh]"></div>;
 };
 
 export const Header = ({ title }: ItemProps) => {

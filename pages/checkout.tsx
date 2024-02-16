@@ -12,10 +12,9 @@ import React, { useState } from "react";
 import machine from "@/public/imgs/siphon2.png";
 
 export default function Checkout() {
-  const [isCustomerVisible, setCustomerVisible] = useState(false);
+  const [isCustomerVisible, setCustomerVisible] = useState(true);
   const [isContentVisible, setContentVisible] = useState(false);
   const [isPaymentVisible, setPaymentVisible] = useState(false);
-  const [isItemVisible, setItemVisible] = useState(false);
 
   const handleCustomerToggle = () => {
     setCustomerVisible(!isCustomerVisible);
@@ -28,47 +27,40 @@ export default function Checkout() {
     setPaymentVisible(!isPaymentVisible);
   };
 
-  const handleItemToggle = () => {
-    setItemVisible(!isItemVisible);
+  const customerNext = () => {
+    setCustomerVisible(!isCustomerVisible);
+    setContentVisible(!isContentVisible);
   };
+  const deliveryNext = () => {
+    setPaymentVisible(!isPaymentVisible);
+    setContentVisible(!isContentVisible);
+  };
+
   return (
     <div className="py-[15vh]">
-      <div className="cursor-pointer text-brown" onClick={handleItemToggle}>
+      <div className="text-brown">
         <Header title="items" />
       </div>
-      {isItemVisible && (
+      <div>
+        <div className="border-b border-white mx-[3vw]"></div>
         <div>
-          <div className="border-b border-white mx-[3vw]"></div>
-          <div>
-            <CartItem image={machine} title="Siphon Machine" price="$145" />
-            <CartItem image={machine} title="Siphon Machine" price="$145" />
-            <CartItem image={machine} title="Siphon Machine" price="$145" />
-          </div>
-          <div className="justify-end">
-            <div className="flex flex-col ">
-              <TotalItem title="subtotal" price="$360 CAD" />
-              <TotalItem title="tax" price="$50 CAD" />
-              <TotalItem title="shipping" price="$16 CAD" />
+          <CartItem image={machine} title="Siphon Machine" price="$145" />
+          <CartItem image={machine} title="Siphon Machine" price="$145" />
+          <CartItem image={machine} title="Siphon Machine" price="$145" />
+        </div>
+        <div className="flex justify-center sm:justify-end sm:pr-[5vw]">
+          <div className="flex flex-col ">
+            <TotalItem title="subtotal" price="$360 CAD" />
+            <TotalItem title="tax" price="$50 CAD" />
+            <TotalItem title="shipping" price="$16 CAD" />
 
-              <div className="text-right grid grid-cols-2 mx-auto gap-[5vw] my-[3vh]">
-                <p>total</p>
-                <p className="font-bold">$391 CAD</p>
-              </div>
-            </div>
-          </div>
-          <div className="pb-[2vh] flex justify-center space-x-3">
-            <div onClick={handleCustomerToggle}>
-              <FullButton
-                text="NEXT"
-                //   link="/checkout"
-                colour="bg-brown hover:bg-white"
-                textColour="text-white  hover:text-brown"
-              />
+            <div className="text-right grid grid-cols-2 mx-auto gap-[5vw] my-[3vh]">
+              <p>total</p>
+              <p className="font-bold">$391 CAD</p>
             </div>
           </div>
         </div>
-      )}
-
+      </div>
       <div>
         <Rect />
         <div>
@@ -93,16 +85,7 @@ export default function Checkout() {
                 <InputWide title="email" type="text" id="email" />
               </div>
               <div className="pb-[2vh] flex justify-center space-x-3">
-                <div onClick={handleItemToggle}>
-                  {" "}
-                  <FullButton
-                    text="BACK"
-                    // link="/products"
-                    colour="border-brown hover:bg-brown"
-                    textColour="text-brown hover:text-white"
-                  />
-                </div>
-                <div onClick={handleContentToggle}>
+                <div onClick={customerNext}>
                   <FullButton
                     text="NEXT"
                     //   link="/checkout"
@@ -153,7 +136,7 @@ export default function Checkout() {
                 />
               </div>{" "}
               <div className="pb-[2vh] flex justify-center space-x-3">
-                <div onClick={handleCustomerToggle}>
+                <div onClick={customerNext}>
                   {" "}
                   <FullButton
                     text="BACK"
@@ -162,7 +145,7 @@ export default function Checkout() {
                     textColour="text-brown hover:text-white"
                   />
                 </div>
-                <div onClick={handleItemToggle}>
+                <div onClick={deliveryNext}>
                   <FullButton
                     text="NEXT"
                     //   link="/checkout"
@@ -198,13 +181,13 @@ export default function Checkout() {
                 />
               </div>
               <div className="pb-[2vh] flex justify-center space-x-3">
-                <div onClick={handleContentToggle}>
+                <div>
                   {" "}
                   <FullButton
-                    text="BACK"
-                    // link="/products"
-                    colour="border-brown hover:bg-brown"
-                    textColour="text-brown hover:text-white"
+                    text="PAY"
+                    link="/confirm"
+                    colour="bg-brown hover:bg-white"
+                    textColour="text-white  hover:text-brown"
                   />
                 </div>
               </div>
