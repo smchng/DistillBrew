@@ -17,6 +17,7 @@ import Filter from "@/pages/products/filter";
 import Set from "@/pages/products/set";
 import Machine from "@/pages/products/machine";
 import Cart from "@/pages/cart";
+import Checkout from "@/pages/checkout";
 
 export default function App() {
   const router = useRouter();
@@ -56,6 +57,7 @@ export default function App() {
           {currentPage === "/contact" && <Contact />}
           {currentPage === "/blog" && <Blog />}
           {currentPage === "/cart" && <Cart />}
+          {currentPage === "/checkout" && <Checkout />}
           {currentPage === "/products/filter" && <Filter />}
           {currentPage === "/products/paddle" && <Paddle />}
           {currentPage === "/products/set" && <Set />}
