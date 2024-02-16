@@ -7,8 +7,8 @@ export default function Burner() {
     <div className="bg-beige2 pt-[10vh]">
       <ProductDetail
         image={burner}
-        alt="filter"
-        title="Filter"
+        alt="burner"
+        title="Burner"
         price="20.00 CAD"
         detail="Our sleek butane Burner made with durable stainless steel makes it the perfect match for Siphon Coffee Machines. With a capability of reaching 1200°C/2100°F max., our lightweight Burner is sure to brew a perfect cup of coffee."
       />

@@ -62,7 +62,7 @@ export default function Products() {
               link="/products/burner"
               stylingClasses1="w-full h-full bg-matcha relative"
               stylingClasses2=" drop-shadow-xl"
-              name="Paddle"
+              name="Burner"
             />
           </div>
         </div>
