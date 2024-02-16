@@ -1,13 +1,18 @@
 import { useState } from "react";
 
 type NavProps = {
-  stylingClasses: string;
-  fill?: string;
-  beanFill: string;
+  stylingClasses1: string;
+  stylingClasses2: string;
+  fill: string;
+  iconFill: string;
 };
 
-export const Bean = ({ stylingClasses, fill, beanFill }: NavProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+export const Bean = ({
+  stylingClasses1,
+  stylingClasses2,
+  fill,
+  iconFill,
+}: NavProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,15 +20,39 @@ export const Bean = ({ stylingClasses, fill, beanFill }: NavProps) => {
       height="100%"
       viewBox="0 0 64 64"
       fill="none"
-      className={stylingClasses}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={stylingClasses1}
     >
       <circle cx="32" cy="32" r="32" fill={fill} />
       <path
         d="M34.0059 26.2155C35.7735 20.9677 39.1151 16.3373 40.565 14.678C38.9375 15.8152 35.0376 18.9761 32.458 22.5224C29.2336 26.9553 30.0559 32.3679 28.9158 36.7207C27.7756 41.0734 22.8566 51.2255 19.3692 49.5357C15.8818 47.846 12.7681 38.053 19.0131 25.1643C25.2581 12.2755 36.6188 9.71383 41.6344 12.4711C46.6499 15.2283 51.1981 25.1713 45.1686 37.8374C39.1391 50.5036 31.4255 52.8703 28.3493 53.8869C25.273 54.9034 22.3433 52.2848 24.4507 49.4908C26.5581 46.6967 29.2183 42.3174 31.357 37.9035C33.4957 33.4896 31.7964 32.7752 34.0059 26.2155Z"
-        stroke={beanFill}
+        stroke={iconFill}
         strokeWidth="2"
+        className={stylingClasses2}
+      />
+    </svg>
+  );
+};
+
+export const Cart = ({
+  stylingClasses1,
+  stylingClasses2,
+  fill,
+  iconFill,
+}: NavProps) => {
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={stylingClasses1}
+    >
+      <circle cx="32" cy="32" r="32" fill={fill} />
+      <path
+        d="M41.875 46.75C39.7937 46.75 38.125 48.4187 38.125 50.5C38.125 51.4946 38.5201 52.4484 39.2234 53.1516C39.9266 53.8549 40.8804 54.25 41.875 54.25C42.8696 54.25 43.8234 53.8549 44.5266 53.1516C45.2299 52.4484 45.625 51.4946 45.625 50.5C45.625 49.5054 45.2299 48.5516 44.5266 47.8484C43.8234 47.1451 42.8696 46.75 41.875 46.75ZM11.875 16.75V20.5H15.625L22.375 34.7313L19.825 39.325C19.5437 39.85 19.375 40.4688 19.375 41.125C19.375 42.1196 19.7701 43.0734 20.4733 43.7766C21.1766 44.4799 22.1304 44.875 23.125 44.875H45.625V41.125H23.9125C23.7882 41.125 23.669 41.0756 23.581 40.9877C23.4931 40.8998 23.4438 40.7806 23.4438 40.6562C23.4438 40.5625 23.4625 40.4875 23.5 40.4313L25.1875 37.375H39.1563C40.5625 37.375 41.8 36.5875 42.4375 35.4438L49.15 23.3125C49.2812 23.0125 49.375 22.6938 49.375 22.375C49.375 21.8777 49.1775 21.4008 48.8258 21.0492C48.4742 20.6975 47.9973 20.5 47.5 20.5H19.7688L18.0062 16.75M23.125 46.75C21.0437 46.75 19.375 48.4187 19.375 50.5C19.375 51.4946 19.7701 52.4484 20.4733 53.1516C21.1766 53.8549 22.1304 54.25 23.125 54.25C24.1196 54.25 25.0734 53.8549 25.7766 53.1516C26.4799 52.4484 26.875 51.4946 26.875 50.5C26.875 49.5054 26.4799 48.5516 25.7766 47.8484C25.0734 47.1451 24.1196 46.75 23.125 46.75Z"
+        fill={iconFill}
+        className={stylingClasses2}
       />
     </svg>
   );

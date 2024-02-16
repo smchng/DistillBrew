@@ -1,25 +1,57 @@
 import Link from "next/link";
+import React, { useState } from "react";
 
 type ButtonProp = {
-  text: string;
+  text?: string;
   link?: string;
+  colour?: string;
+  textColour?: string;
 };
 
-export const FullButton = ({ text, link }: ButtonProp) => {
+export const FullButton = ({ text, link, colour, textColour }: ButtonProp) => {
   const resolvedLink = link !== undefined ? link : "";
   return (
-    <div className="mt-2 hover:bg-brown border border-white rounded-full border-[1.5px] px-5 pb-1 leading-none">
-      <Link href={resolvedLink} className="text-white">
-        {text}
-      </Link>
+    <Link
+      href={resolvedLink}
+      className={`${colour}  ${textColour} border rounded-full border-[1.5px] px-5 pt-1 inline-block transition-colors`}
+    >
+      {text}
+    </Link>
+  );
+};
+
+export const SubButton = ({ text, colour, textColour }: ButtonProp) => {
+  return (
+    <div
+      className={`${colour}  ${textColour} text-2xs border rounded-full border-[1.5px] px-5 pt-1 inline-block transition-colors`}
+    >
+      {text}
     </div>
   );
 };
 
-export const PlaceholderButton = ({ text }: ButtonProp) => {
+export const Toggle = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
-    <div className="mt-2 hover:bg-brown border border-white rounded-full border-[1.5px] px-5 pb-1 leading-none">
-      {text}
+    <div className="mt-2 border border-brown rounded-full border-[1.5px] px-5 leading-none inline-block">
+      <button className="text-brown text-xs " onClick={handleDecrease}>
+        -
+      </button>
+      <span className="text-xs px-[15px]">{quantity}</span>
+      <button className="text-brown text-xs" onClick={handleIncrease}>
+        +
+      </button>
     </div>
   );
 };

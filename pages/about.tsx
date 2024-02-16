@@ -9,12 +9,12 @@ export default function About() {
       text: "At the core of our company values is a relentless pursuit of innovation in the realm of coffee brewing. We are committed to pushing the boundaries of traditional methods, consistently introducing cutting-edge technologies and design enhancements to elevate the siphon coffee experience.",
     },
     {
-      title: "Innovation",
-      text: "At the core of our company values is a relentless pursuit of innovation in the realm of coffee brewing. We are committed to pushing the boundaries of traditional methods, consistently introducing cutting-edge technologies and design enhancements to elevate the siphon coffee experience.",
+      title: "Quality Craftsmanship",
+      text: "We take pride in the meticulous craftsmanship and elegant design that define our siphon coffee machines. Each product is a testament to the artistry involved in creating a device that not only produces exceptional coffee but also serves as a visual masterpiece in any kitchen. ",
     },
     {
-      title: "Innovation",
-      text: "At the core of our company values is a relentless pursuit of innovation in the realm of coffee brewing. We are committed to pushing the boundaries of traditional methods, consistently introducing cutting-edge technologies and design enhancements to elevate the siphon coffee experience.",
+      title: "Customer Empowerment",
+      text: "We believe in empowering our customers to become true coffee connoisseurs. Through comprehensive education, user-friendly interfaces, and exceptional customer support, we aim to demystify the siphon brewing process.",
     },
   ];
   return (
