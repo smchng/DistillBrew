@@ -4,7 +4,7 @@ import burner from "@/public/imgs/burner.png";
 
 export default function Burner() {
   return (
-    <div className="bg-blue py-[10vh]">
+    <div className="bg-beige2 pt-[10vh]">
       <ProductDetail
         image={burner}
         alt="filter"

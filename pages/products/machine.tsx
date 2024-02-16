@@ -4,7 +4,7 @@ import siphon from "@/public/imgs/siphon2.png";
 
 export default function Machine() {
   return (
-    <div className="bg-beige2 py-[10vh]">
+    <div className="bg-beige2 pt-[10vh]">
       <ProductDetail
         image={siphon}
         alt="siphon machine"

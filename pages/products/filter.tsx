@@ -4,7 +4,7 @@ import filter from "@/public/imgs/filter.png";
 
 export default function Filter() {
   return (
-    <div className="bg-blue py-[10vh]">
+    <div className="bg-blue pt-[10vh]">
       <ProductDetail
         image={filter}
         alt="filter"

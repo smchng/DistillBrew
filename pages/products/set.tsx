@@ -4,7 +4,7 @@ import set from "@/public/imgs/fullset.png";
 
 export default function Set() {
   return (
-    <div className="bg-beige  py-[10vh]">
+    <div className="bg-beige  pt-[10vh]">
       <ProductDetail
         image={set}
         alt="set"
