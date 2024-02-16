@@ -8,7 +8,6 @@ import Nav from "@/components/nav/nav";
 import Footer from "@/components/footer/footer";
 import Home from "@/pages/index";
 import About from "@/pages/about";
-import Menu from "@/pages/menu";
 import Contact from "@/pages/contact";
 import HowTo from "@/pages/howTo";
 import Products from "@/pages/products";
@@ -18,6 +17,8 @@ import Paddle from "@/pages/products/paddle";
 import Filter from "@/pages/products/filter";
 import Set from "@/pages/products/set";
 import Machine from "@/pages/products/machine";
+import Cart from "@/pages/cart";
+import Checkout from "@/pages/checkout";
 
 export default function App() {
   const router = useRouter();
@@ -52,12 +53,13 @@ export default function App() {
         <section>
           {currentPage === "/" && <Home />}
           {currentPage === "/about" && <About />}
-          {currentPage === "/menu" && <Menu />}
           {currentPage === "/howTo" && <HowTo />}
           {currentPage === "/products" && <Products />}
           {currentPage === "/contact" && <Contact />}
           {currentPage === "/blog" && <Blog />}
           {currentPage === "/blogPost" && <BlogPost />}
+          {currentPage === "/cart" && <Cart />}
+          {currentPage === "/checkout" && <Checkout />}
           {currentPage === "/products/filter" && <Filter />}
           {currentPage === "/products/paddle" && <Paddle />}
           {currentPage === "/products/set" && <Set />}

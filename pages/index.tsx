@@ -17,7 +17,12 @@ export default function Home() {
             At Distill Brew Co., it’s not just a cup of coffee. You deserve a
             high-quality coffee experience every day. We can help you there.
           </p>
-          <FullButton text="SHOP NOW" link="/about" />
+          <FullButton
+            text="SHOP NOW"
+            link="/products"
+            colour="hover:bg-brown"
+            textColour="text-white"
+          />
         </div>
       </section>
       <section>
