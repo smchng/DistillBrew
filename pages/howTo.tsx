@@ -53,9 +53,14 @@ export default function Home() {
     }
   };
 
-  // const nextSectionRef = useRef();
+  const hasBanner = true; // Set this to true if you have a banner, false otherwise
+  const totalItemsWithoutBanner = instructionItem.length;
+  const totalItemsWithBanner = hasBanner
+    ? totalItemsWithoutBanner + 1
+    : totalItemsWithoutBanner;
+
   const [activeIndex, setActiveIndex] = useState(0);
-  // Scroll event listener to update the active index based on the scroll position
+
   const handleDotScroll = () => {
     const section = nextSectionRef.current;
     if (section) {
@@ -63,12 +68,14 @@ export default function Home() {
       let itemIndex = 0;
 
       // Find the index of the section currently in view
-      for (let i = 0; i < instructionItem.length; i++) {
+      for (let i = 0; i < totalItemsWithBanner; i++) {
         const currentSection = nextSectionRef.current.children[
           i
         ] as HTMLElement;
 
+        // Check if currentSection is defined before accessing its properties
         if (
+          currentSection &&
           currentSection.offsetTop <= scrollPosition &&
           currentSection.offsetTop + currentSection.clientHeight >
             scrollPosition
@@ -125,7 +132,7 @@ export default function Home() {
         ))}
       </div>
       <InstructionDots
-        totalItems={instructionItem.length}
+        totalItems={totalItemsWithBanner}
         activeIndex={activeIndex}
       />
     </div>
