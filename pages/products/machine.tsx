@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { ProductDetail } from "@/components/product/productDetails";
-import siphon from "@/public/imgs/siphon.png";
+import siphon from "@/public/imgs/siphon2.png";
 
 export default function Machine() {
   return (
-    <div className="bg-beige2">
+    <div className="bg-beige2 py-[10vh]">
       <ProductDetail
         image={siphon}
         alt="siphon machine"
@@ -14,10 +14,22 @@ export default function Machine() {
       />
       <div>
         <div className="grid grid-cols-2">
-          <Image src={siphon} alt="render" />
-          <Image src={siphon} alt="render" />
+          <Image
+            src={siphon}
+            alt="render"
+            className="border border-[1px] border-brown"
+          />
+          <Image
+            src={siphon}
+            alt="render"
+            className="border border-[1px] border-brown"
+          />
         </div>
-        <Image src={siphon} alt="render" />
+        <Image
+          src={siphon}
+          alt="render"
+          className="border border-[1px] border-brown"
+        />
       </div>
     </div>
   );

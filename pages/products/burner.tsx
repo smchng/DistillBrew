@@ -1,26 +1,26 @@
 import Image from "next/image";
 import { ProductDetail } from "@/components/product/productDetails";
-import filter from "@/public/imgs/filter.png";
+import burner from "@/public/imgs/burner.png";
 
-export default function Filter() {
+export default function Burner() {
   return (
     <div className="bg-blue py-[10vh]">
       <ProductDetail
-        image={filter}
+        image={burner}
         alt="filter"
         title="Filter"
         price="20.00 CAD"
-        detail="Enhance your coffee with our reusable, stainless steel Filter. Compatible with most Siphon Coffee Machines, our metal Filter is the key to brewing a smooth cup of coffee every time. "
+        detail="Our sleek butane Burner made with durable stainless steel makes it the perfect match for Siphon Coffee Machines. With a capability of reaching 1200°C/2100°F max., our lightweight Burner is sure to brew a perfect cup of coffee."
       />
 
       <div className="grid grid-cols-2">
         <Image
-          src={filter}
+          src={burner}
           alt="render"
           className="border border-[1px] border-brown"
         />
         <Image
-          src={filter}
+          src={burner}
           alt="render"
           className="border border-[1px] border-brown"
         />
