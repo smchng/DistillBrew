@@ -17,35 +17,33 @@ export default function Products() {
         name="Siphon Set"
       />
 
-      <div className="flex">
+      <div className="sm:flex">
         <div className=" flex-1">
-          <div className="bg-peach w-full h-full ">
-            <Product
-              image={machine}
-              alt="Outer Image"
-              link="/products/machine"
-              stylingClasses1="bg-beige1 w-full h-full relative"
-              stylingClasses2=" object-cover"
-              name="Machine"
-            />
-          </div>
+          <Product
+            image={machine}
+            alt="Outer Image"
+            link="/products/machine"
+            stylingClasses1="bg-beige1 relative object-cover"
+            stylingClasses2="w-full h-full object-cover"
+            name="Machine"
+          />
         </div>
-        <div className="flex-1">
-          <div>
+        <div className="flex-1 flex flex-col gap-0">
+          <div className="flex-1">
             <Product
               image={paddle}
               alt="Outer Image"
               link="/products/paddle"
-              stylingClasses1="bg-blue relative"
+              stylingClasses1="w-full h-full bg-blue relative"
               name="Paddle"
             />
           </div>
-          <div>
+          <div className="flex-1">
             <Product
               image={filter}
               alt="Outer Image"
               link="/products/filter"
-              stylingClasses1="bg-matcha relative"
+              stylingClasses1="w-full h-full bg-matcha relative"
               name="Filter"
             />
           </div>
