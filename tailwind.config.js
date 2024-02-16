@@ -16,12 +16,13 @@ module.exports = {
         mocha: "#D4ADA0",
         brown: "#391F06",
         brown2: "#261D15",
+        brown3: "#211B15",
         grey: "#F1F1F1",
         peach: "#ffd1ac",
         matcha: "#C0CFB2",
         blue: "#F3F8FF",
         beige1: "#FEF7F7",
-        beige2:"#F5F2EE"
+        beige2: "#F5F2EE",
       },
       fontSize: {
         "2xs": "12px",
