@@ -12,6 +12,7 @@ import Contact from "@/pages/contact";
 import HowTo from "@/pages/howTo";
 import Products from "@/pages/products";
 import Blog from "@/pages/blog";
+import BlogPost from "@/pages/blogPost";
 import Paddle from "@/pages/products/paddle";
 import Filter from "@/pages/products/filter";
 import Set from "@/pages/products/set";
@@ -56,6 +57,7 @@ export default function App() {
           {currentPage === "/products" && <Products />}
           {currentPage === "/contact" && <Contact />}
           {currentPage === "/blog" && <Blog />}
+          {currentPage === "/blogPost" && <BlogPost />}
           {currentPage === "/cart" && <Cart />}
           {currentPage === "/checkout" && <Checkout />}
           {currentPage === "/products/filter" && <Filter />}
