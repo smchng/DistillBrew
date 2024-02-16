@@ -13,7 +13,7 @@ import HowTo from "@/pages/howTo";
 import Products from "@/pages/products";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blogPost";
-import Paddle from "@/pages/products/paddle";
+import Burner from "@/pages/products/burner";
 import Filter from "@/pages/products/filter";
 import Set from "@/pages/products/set";
 import Machine from "@/pages/products/machine";
@@ -61,7 +61,7 @@ export default function App() {
           {currentPage === "/cart" && <Cart />}
           {currentPage === "/checkout" && <Checkout />}
           {currentPage === "/products/filter" && <Filter />}
-          {currentPage === "/products/paddle" && <Paddle />}
+          {currentPage === "/products/burner" && <Burner />}
           {currentPage === "/products/set" && <Set />}
           {currentPage === "/products/machine" && <Machine />}
         </section>

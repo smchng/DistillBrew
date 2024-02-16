@@ -2,7 +2,7 @@ import { Product } from "@/components/product/product";
 
 import set from "@/public/imgs/fullset.png";
 import machine from "@/public/imgs/siphon.png";
-import paddle from "@/public/imgs/paddle.png";
+import burner from "@/public/imgs/burner.png";
 import filter from "@/public/imgs/filter.png";
 
 export default function Products() {
@@ -31,11 +31,11 @@ export default function Products() {
         <div className="flex-1 flex flex-col gap-0">
           <div className="flex-1">
             <Product
-              image={paddle}
+              image={burner}
               alt="Outer Image"
               link="/products/paddle"
               stylingClasses1="w-full h-full bg-blue relative"
-              name="Paddle"
+              name="Burner"
             />
           </div>
           <div className="flex-1">
