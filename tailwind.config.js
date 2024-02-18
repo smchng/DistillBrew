@@ -7,6 +7,7 @@ module.exports = {
     "*/*/**.{html,js,ts,tsx}",
     "/styles/global.css",
   ],
+
   theme: {
     extend: {
       fontFamily: {
@@ -19,7 +20,8 @@ module.exports = {
         brown3: "#211B15",
         grey: "#F1F1F1",
         peach: "#ffd1ac",
-        matcha: "#C0CFB2",
+        matcha1: "#C0CFB2",
+        matcha2: "#E7EBE3",
         blue: "#F3F8FF",
         beige1: "#FEF7F7",
         beige2: "#F5F2EE",
@@ -34,6 +36,10 @@ module.exports = {
       },
       animation: {
         "spin-slow": "spin 25s linear infinite",
+      },
+      dropShadow: {
+        lg: "0 20px 13px rgba(167, 167, 167, 0.25)",
+        xl: "0 20px 13px rgba(255, 255, 255, 0.25)",
       },
     },
   },

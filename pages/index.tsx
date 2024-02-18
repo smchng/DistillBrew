@@ -74,32 +74,32 @@ export default function Home() {
         <div className="grid grid-cols-3" ref={parallaxRef}>
           <div
             className="object-cover  overflow-hidden relative"
-            data-speed="0.3"
+            data-speed="0.7"
+          >
+            <Image
+              src={siphon}
+              alt="siphon machine"
+              className="w-full h-full object-cover overflow-hidden shadow-md relative "
+            />
+          </div>
+          <div
+            className="object-cover overflow-hidden relative"
+            data-speed="0.7"
+          >
+            <Image
+              src={siphon}
+              alt="siphon machine"
+              className="w-full h-full object-cover overflow-hidden  drop-shadow-xl relative"
+            />
+          </div>
+          <div
+            className="object-cover overflow-hidden relative"
+            data-speed="0.7"
           >
             <Image
               src={siphon}
               alt="siphon machine"
               className="w-full h-full object-cover overflow-hidden drop-shadow-xl relative"
-            />
-          </div>
-          <div
-            className="object-cover overflow-hidden relative"
-            data-speed="0.3"
-          >
-            <Image
-              src={siphon}
-              alt="siphon machine"
-              className="w-full h-full object-cover overflow-hidden  drop-shadow-xl relative drop-shadow-xl"
-            />
-          </div>
-          <div
-            className="object-cover overflow-hidden relative"
-            data-speed="0.3"
-          >
-            <Image
-              src={siphon}
-              alt="siphon machine"
-              className="w-full h-full object-cover overflow-hidden drop-shadow-xl relative  drop-shadow-xl"
             />
           </div>
         </div>
