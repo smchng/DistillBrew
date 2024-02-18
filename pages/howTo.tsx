@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Intruction, InstructionDots } from "@/components/instruction";
-import { FullButton } from "@/components/button/button";
+import { SubButton } from "@/components/button/button";
 import React, { useState, useEffect, useRef } from "react";
 import dSiphon from "@/public/imgs/3dSiphon.png";
 import siphon from "@/public/imgs/siphonInt.png";
@@ -107,12 +107,11 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
           <div
             onClick={handleScroll}
-            className="absolute max-w-[45vw] text-white leading-none text-center"
+            className="absolute max-w-[80vw] lg:max-w-[25vw] text-white leading-none text-center"
           >
-            <h1>Learn the art of siphon brewing</h1>
-            <FullButton
+            <h1 className="pb-[2vh]">Learn the art of siphon brewing</h1>
+            <SubButton
               text="BEGIN YOUR JOURNEY"
-              // link="/about"
               colour="hover:bg-brown"
               textColour="text-white"
             />

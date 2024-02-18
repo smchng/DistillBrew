@@ -53,7 +53,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <h1 className=" max-w-[60vw] text-white">Every cup matters</h1>
-          <p className=" max-w-[40vw] text-white max-w-[40vw]">
+          <p className=" max-w-[40vw] text-white max-w-[40vw]  pb-[3vh]">
             At Distill Brew Co., it’s not just a cup of coffee. You deserve a
             high-quality coffee experience every day. We can help you there.
           </p>
