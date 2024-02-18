@@ -20,7 +20,7 @@ export default function Products() {
           />
         </Link>
 
-        <div className="absolute max-w-[40vw] pl-[10vw]">
+        <div className="absolute max-w-[40vw] pl-[10vw] ">
           <h2 className=" font-bold">
             Siphon <br />
             Set
@@ -41,7 +41,7 @@ export default function Products() {
             alt="Outer Image"
             link="/products/machine"
             stylingClasses1="bg-beige1 object-cover overflow-hidden relative"
-            stylingClasses2="w-full h-full object-cover overflow-hidden top-[50vh] drop-shadow-xl relative"
+            stylingClasses2="w-full h-full object-cover overflow-hidden top-[50vh] drop-shadow-lg relative"
             name="Machine"
           />
         </div>
@@ -51,7 +51,8 @@ export default function Products() {
               image={filter}
               alt="Outer Image"
               link="/products/filter"
-              stylingClasses1="w-full h-full bg-blue relative"
+              stylingClasses1="w-full h-full bg-blue relative flex items-center"
+              stylingClasses2=" drop-shadow-lg"
               name="Filter"
             />
           </div>
@@ -60,8 +61,8 @@ export default function Products() {
               image={burner}
               alt="Outer Image"
               link="/products/burner"
-              stylingClasses1="w-full h-full bg-matcha relative"
-              stylingClasses2=" drop-shadow-xl"
+              stylingClasses1="w-full h-full bg-matcha2 relative flex items-center"
+              stylingClasses2=" drop-shadow-lg"
               name="Burner"
             />
           </div>
