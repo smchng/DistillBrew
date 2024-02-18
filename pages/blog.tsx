@@ -31,21 +31,21 @@ export default function Blog() {
   const ReviewItems = [
     {
       text: "“Best purchase of my life. A true game-changer.”",
-      link: "",
+
       image: front,
       alt: "img",
       title: "Freddy",
     },
     {
       text: "“Distill Brew’s Siphon has truly elevated my mornings.”",
-      link: "",
+
       image: front,
       alt: "img",
       title: "Marianne",
     },
     {
       text: "“I’m guaranteed a perfect cup of coffee every day with my Siphon.”",
-      link: "",
+
       image: front,
       alt: "img",
       title: "Alex",
