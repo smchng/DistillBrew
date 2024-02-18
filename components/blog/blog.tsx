@@ -15,13 +15,14 @@ type BlogProps = {
 export const BlogPost = ({ title, text, image, alt }: BlogProps) => {
   return (
     <div className="flex border border-brown rounded-2xl mb-[3vh] p-[1vw] gap-[5vw] relative">
-      <div className="">
+      <div className="flex flex-col">
         <p>{title}</p>
         <p>{text}</p>{" "}
-        <Link href="/blogPost" className="items-end">
+        <Link href="/blogPost" className="mt-auto">
           Read more
         </Link>
       </div>
+
       <div className="relative overflow-visible mr-[-2rem]">
         <Image
           src={image}
@@ -36,7 +37,7 @@ export const BlogPost = ({ title, text, image, alt }: BlogProps) => {
 export const Reviews = ({ amount, title, text, image, alt }: BlogProps) => {
   const numberOfStars = amount;
   return (
-    <div className="border border-brown rounded-2xl p-[1vw] w-[40vw]  mr-[2vw] md:w-[25vw] relative  flex flex-col items-center text-center">
+    <div className="border border-brown rounded-2xl p-[1vw] w-[40vw] mr-[2vw] md:w-[25vw] relative flex flex-col items-center text-center">
       <div className="relative overflow-visible mt-[-3rem]">
         <Image
           src={image}
@@ -44,7 +45,7 @@ export const Reviews = ({ amount, title, text, image, alt }: BlogProps) => {
           className="h-[100px] w-[100px] object-cover rounded-2xl mb-[3vh]"
         />
       </div>
-      <div className="flex space-x-1">
+      <div className="flex space-x-1 mb-[1vh]">
         {Array.from({ length: numberOfStars } as number[], (_, index) => (
           <Image
             key={index}
@@ -56,9 +57,9 @@ export const Reviews = ({ amount, title, text, image, alt }: BlogProps) => {
           />
         ))}
       </div>
-      <div className="mt-[1vh] flex flex-col">
+      <div className="flex-grow flex flex-col">
         <p>{text}</p>
-        <p className="text-xs mt-auto items-end">{title}</p>
+        <p className="text-xs mt-auto">{title}</p>
       </div>
     </div>
   );
