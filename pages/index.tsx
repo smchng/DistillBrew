@@ -19,8 +19,9 @@ export default function Home() {
 
         for (const element of parallaxElements) {
           const speed = parseFloat(element.getAttribute("data-speed") || "1");
-          const translateY = (scrollValue * speed) / 2; // Adjust the division factor as needed
-          element.style.transform = `translateY(${translateY}px)`;
+          const translateY = scrollValue * speed;
+          const Y = translateY * -1;
+          element.style.transform = `translateY(${Y}px)`;
         }
 
         const lastImage = parallaxElements[parallaxElements.length - 1];
