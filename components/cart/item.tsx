@@ -27,7 +27,7 @@ export const CartItem = ({ image, title, price }: ItemProps) => {
           <div className="overflow-hidden rounded-lg bg-beige2 w-[100px] h-[100px]">
             <Image src={resolvedImage} alt="cart item" />
           </div>
-          <div className="flex items-end px-[5vw] w-full">
+          <div className="md:flex items-end px-[5vw] w-full">
             <div>
               <p className="text-sm leading-none">{title}</p>
               <a
@@ -38,7 +38,7 @@ export const CartItem = ({ image, title, price }: ItemProps) => {
               </a>
             </div>
             <div className="ml-auto">
-              <h4 className="font-bold">{price} CAD</h4>
+              <h4 className="font-bold md:text-sm text-xs">{price} CAD</h4>
             </div>
           </div>
         </div>

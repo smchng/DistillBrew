@@ -12,6 +12,8 @@ import Contact from "@/pages/contact";
 import HowTo from "@/pages/howTo";
 import Products from "@/pages/products";
 import Blog from "@/pages/blog";
+import Sent from "@/pages/sent";
+import Confirm from "@/pages/confirm";
 import BlogPost from "@/pages/blogPost";
 import Burner from "@/pages/products/burner";
 import Filter from "@/pages/products/filter";
@@ -61,6 +63,8 @@ export default function App() {
           {currentPage === "/blogPost" && <BlogPost />}
           {currentPage === "/cart" && <Cart />}
           {currentPage === "/checkout" && <Checkout />}
+          {currentPage === "/confirm" && <Confirm />}
+          {currentPage === "/sent" && <Sent />}
           {currentPage === "/products/filter" && <Filter />}
           {currentPage === "/products/burner" && <Burner />}
           {currentPage === "/products/set" && <Set />}

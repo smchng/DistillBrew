@@ -19,8 +19,8 @@ export const ProductDetail = ({
   detail,
 }: ProductProp) => {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="grid grid-cols-2  ">
+    <div className="flex items-center justify-center md:max-w-[80vw] m-auto mb-[20vh]">
+      <div className="grid sm:grid-cols-2 px-[5vw]">
         <div className="w-[90%]">
           <Image src={image} alt={alt} />
         </div>
@@ -29,7 +29,7 @@ export const ProductDetail = ({
             <p className="text-[25px]">{title}</p>
             <p className="font-bold">{price}</p>
           </div>
-          <p className="max-w-[80%]">{detail}</p>
+          <p className="max-w-[80%] text-2xs md:text-xs">{detail}</p>
           <div className="my-[1vw]">
             <p className="text-2xs">QUANTITY</p>
             <Toggle />

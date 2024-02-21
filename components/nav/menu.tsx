@@ -43,7 +43,11 @@ const Menu: React.FC<MenuPageProps> = ({ onClose }) => {
           </Link>
         ))}
       </div>
-      <Image src={front} alt="Outer Image" className="h-[100vh] object-cover" />
+      <Image
+        src={front}
+        alt="Outer Image"
+        className="h-[100vh] object-cover invisible sm:visible"
+      />
     </div>
   );
 };

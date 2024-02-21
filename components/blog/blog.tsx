@@ -23,7 +23,7 @@ export const BlogPost = ({ title, text, image, alt }: BlogProps) => {
         </Link>
       </div>
 
-      <div className="relative overflow-visible mr-[-2rem]">
+      <div className="relative overflow-visible md:mr-[-2rem] mr-[-1rem]">
         <Image
           src={image}
           alt={alt}
@@ -58,7 +58,7 @@ export const Reviews = ({ amount, title, text, image, alt }: BlogProps) => {
         ))}
       </div>
       <div className="flex-grow flex flex-col">
-        <p>{text}</p>
+        <p className="text-xs md:text-sm">{text}</p>
         <p className="text-xs mt-auto">{title}</p>
       </div>
     </div>

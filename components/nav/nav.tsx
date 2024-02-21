@@ -59,7 +59,7 @@ const Nav = () => {
         >
           <h3
             onClick={handleToggleOverlay}
-            className={`font-semibold ${
+            className={`font-semibold text-xs md:text-base ${
               isTargetPage ? "text-white" : "text-brown"
             }${isMenuPageVisible ? "text-brown" : ""}`}
           >
