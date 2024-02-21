@@ -67,9 +67,13 @@ export default function Home() {
       </section>
       <section className="h-screen object-cover overflow-hidden bg-brown3">
         <h2 className="text-white text-center pt-[5vh]">Siphon</h2>
-        <div className="flex space-x-5 justify-center text-white">
-          <Link href="howTo">LEARN MORE</Link>
-          <Link href="products">SHOP</Link>
+        <div className="flex space-x-5 justify-center text-white ">
+          <Link href="/howTo" className="z-10">
+            LEARN MORE
+          </Link>
+          <Link href="/products" className="z-10">
+            SHOP
+          </Link>
         </div>
         <div className="grid grid-cols-3" ref={parallaxRef}>
           <div
