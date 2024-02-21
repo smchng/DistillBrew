@@ -6,22 +6,22 @@ import Marquee from "react-fast-marquee";
 export default function Blog() {
   const BlogItems = [
     {
-      title: "TITLE",
-      text: "textetxetxtex",
+      title: "NEW LOCATION",
+      text: "In-store cafe opening on Denman",
 
       image: front,
       alt: "img",
     },
     {
-      title: "TITLE",
-      text: "textetxetxtex",
+      title: "INNOVATIVE DESIGN",
+      text: "In the dynamic world of eCommerce, staying ahead of the curve is essential.",
 
       image: front,
       alt: "img",
     },
     {
-      title: "TITLE",
-      text: "textetxetxtex",
+      title: "A NEW BEGINNING",
+      text: "Introducing Siphon ExCommerce-the revolutionary platform that's changing the way online businesses operate.",
 
       image: front,
       alt: "img",
@@ -59,7 +59,7 @@ export default function Blog() {
           alt="location"
           className="object-cover w-full h-full"
         />
-        <h3 className="absolute bottom-0 left-0 p-8 text-white sm:max-w-[60vw] leading-none">
+        <h3 className="absolute bottom-0 left-0 p-8 text-white sm:max-w-[60vw] leading-none text-lg">
           Denman location opening soon
         </h3>
       </div>
@@ -68,7 +68,7 @@ export default function Blog() {
         <div>
           <h2 className="text-brown py-[8vh]  text-[40px]">What's brewing</h2>
         </div>
-        <div className="md:flex md:space-x-[3vw]">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-[3vw]">
           {BlogItems.map((item, index) => (
             <BlogPost
               key={index}

@@ -14,20 +14,20 @@ type BlogProps = {
 
 export const BlogPost = ({ title, text, image, alt }: BlogProps) => {
   return (
-    <div className="flex border border-brown rounded-2xl mb-[3vh] p-[1vw] gap-[5vw] relative">
+    <div className="grid grid-cols-2 border border-brown rounded-2xl mb-[3vh] p-[2vw] gap-[2vw] relative">
       <div className="flex flex-col">
-        <p>{title}</p>
-        <p>{text}</p>{" "}
+        <p className="text-2xs sm:text-sm">{title}</p>
+        <p className="text-2xs sm:text-xs">{text}</p>{" "}
         <Link href="/blogPost" className="mt-auto">
           Read more
         </Link>
       </div>
 
-      <div className="relative overflow-visible md:mr-[-2rem] mr-[-1rem]">
+      <div className="relative overflow-visible lg:mr-[-4rem]">
         <Image
           src={image}
           alt={alt}
-          className="h-[25vh] md:w-[40vw] object-cover rounded-2xl"
+          className="h-full md:w-[40vw] object-cover rounded-2xl"
         />
       </div>
     </div>

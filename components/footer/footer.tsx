@@ -25,7 +25,9 @@ const Footer = () => {
           </Link>
         </div>
         <div className="mb-[4vh]">
-          <h3>About</h3>
+          <Link href="/about">
+            <h3>About</h3>
+          </Link>
         </div>
         <div className="mb-[4vh]">
           <h3>Subscribe</h3>

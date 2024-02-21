@@ -4,22 +4,22 @@ import { BlogPost, Reviews } from "@/components/blog/blog";
 export default function blogPost() {
   const BlogItems = [
     {
-      title: "TITLE",
-      text: "textetxetxtex",
+      title: "NEW LOCATION",
+      text: "In-store cafe opening on Denman",
 
       image: front,
       alt: "img",
     },
     {
-      title: "TITLE",
-      text: "textetxetxtex",
+      title: "INNOVATIVE DESIGN",
+      text: "In the dynamic world of eCommerce, staying ahead of the curve is essential.",
 
       image: front,
       alt: "img",
     },
     {
-      title: "TITLE",
-      text: "textetxetxtex",
+      title: "A NEW BEGINNING",
+      text: "Introducing Siphon ExCommerce-the revolutionary platform that's changing the way online businesses operate.",
 
       image: front,
       alt: "img",
@@ -47,7 +47,7 @@ export default function blogPost() {
         <div>
           <h2 className="text-brown py-[8vh]">What's brewing</h2>
         </div>
-        <div className="md:flex md:space-x-[3vw]">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-[3vw]">
           {BlogItems.map((item, index) => (
             <BlogPost
               key={index}
