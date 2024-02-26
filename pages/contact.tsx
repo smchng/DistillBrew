@@ -17,7 +17,7 @@ export default function Contact() {
         <FullButton
           text="SEND"
           link="/sent"
-          colour="border-matcha1 hover:bg-matcha"
+          colour="border-matcha1 hover:bg-matcha1"
           textColour="text-matcha1 hover:text-white"
         />
       </div>

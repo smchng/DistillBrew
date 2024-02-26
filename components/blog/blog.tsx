@@ -23,7 +23,7 @@ export const BlogPost = ({ title, text, image, alt }: BlogProps) => {
         </Link>
       </div>
 
-      <div className="relative overflow-visible lg:mr-[-4rem]">
+      <div className="relative overflow-visible lg:mr-[-3rem]">
         <Image
           src={image}
           alt={alt}

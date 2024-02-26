@@ -33,7 +33,7 @@ const Footer = () => {
           <h3>Subscribe</h3>
           <FullButton
             text="EMAIL ADDRESS"
-            link="/cart"
+            link="mailto:s.chng02@gmail.prettierrc.js.com"
             colour="bg-brown hover:bg-white"
             textColour="text-white  hover:text-brown"
           />

@@ -29,7 +29,7 @@ export const Intruction = ({
           alt={resolvedAlt}
           className="h-screen object-cover"
         />
-        <div className="absolute bottom-0 md:max-w-[35vw] text-white leading-none m-0 right-[8vw] bottom-[30%]">
+        <div className="absolute bottom-0 md:max-w-[35vw] text-white leading-none m-0 right-[8vw] bottom-[30%] pl-[7vw] md:pl-0">
           <h3>{order}</h3>
           <h1 className="mb-[2vh]">{title}</h1>
           <p>{text}</p>

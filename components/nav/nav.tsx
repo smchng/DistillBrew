@@ -17,6 +17,9 @@ const Nav = () => {
   const handleToggleOverlay = () => {
     setMenuPageVisibility(!isMenuPageVisible);
   };
+  const handleCartToggleOverlay = () => {
+    if (isMenuPageVisible) setMenuPageVisibility(!isMenuPageVisible);
+  };
 
   const router = useRouter();
 
@@ -72,7 +75,7 @@ const Nav = () => {
           className="relative flex items-center"
           onMouseEnter={() => setCartHovered(true)}
           onMouseLeave={() => setCartHovered(false)}
-          onClick={handleToggleOverlay}
+          onClick={handleCartToggleOverlay}
         >
           <Link href="/cart">
             <Cart
