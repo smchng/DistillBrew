@@ -1,8 +1,36 @@
 import Image from "next/image";
+import { useState } from "react";
 import { ProductDetail } from "@/components/product/productDetails";
 import burner from "@/public/imgs/burner.png";
 
 export default function Burner() {
+  const [isEnlarged1, setIsEnlarged1] = useState(false);
+  const [isEnlarged2, setIsEnlarged2] = useState(false);
+  const [enlargedImage1, setEnlargedImage1] = useState<string | null>(null);
+  const [enlargedImage2, setEnlargedImage2] = useState<string | null>(null);
+
+  const handleImageClick1 = () => {
+    setIsEnlarged1(true);
+    setEnlargedImage1(burner.src || ""); // Access the src property
+  };
+
+  const handleCloseEnlarged1 = () => {
+    setIsEnlarged1(false);
+    setEnlargedImage1(null);
+  };
+  const handleImageClick2 = () => {
+    setIsEnlarged2(true);
+    setEnlargedImage2(burner.src || ""); // Access the src property
+  };
+
+  const handleCloseEnlarged2 = () => {
+    setIsEnlarged2(false);
+    setEnlargedImage2(null);
+  };
+  const imageWidth = Math.min(
+    (70 * window.innerWidth) / 100,
+    window.innerWidth
+  );
   return (
     <div className="bg-beige2 pt-[10vh]">
       <ProductDetail
@@ -14,16 +42,50 @@ export default function Burner() {
       />
 
       <div className="grid grid-cols-2">
-        <Image
-          src={burner}
-          alt="render"
-          className="border border-[1px] border-brown"
-        />
-        <Image
-          src={burner}
-          alt="render"
-          className="border border-[1px] border-brown"
-        />
+        <div className="relative">
+          <Image
+            src={burner}
+            alt="render"
+            className={`border border-[1px] border-brown cursor-pointer `}
+            onClick={() => handleImageClick1()}
+          />
+          {isEnlarged1 && (
+            <div
+              className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-50 z-10"
+              onClick={handleCloseEnlarged1}
+            >
+              <Image
+                src={enlargedImage1 || ""}
+                alt="render"
+                width={imageWidth}
+                height={200}
+                className="border border-[1px] border-brown bg-white"
+              />
+            </div>
+          )}
+        </div>
+        <div className="relative">
+          <Image
+            src={burner}
+            alt="render"
+            className={`border border-[1px] border-brown cursor-pointer `}
+            onClick={() => handleImageClick2()}
+          />
+          {isEnlarged2 && (
+            <div
+              className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-50 z-10"
+              onClick={handleCloseEnlarged2}
+            >
+              <Image
+                src={enlargedImage2 || ""}
+                alt="render"
+                width={imageWidth}
+                height={200}
+                className="border border-[1px] border-brown bg-white"
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

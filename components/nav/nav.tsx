@@ -72,6 +72,7 @@ const Nav = () => {
           className="relative flex items-center"
           onMouseEnter={() => setCartHovered(true)}
           onMouseLeave={() => setCartHovered(false)}
+          onClick={handleToggleOverlay}
         >
           <Link href="/cart">
             <Cart

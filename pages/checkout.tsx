@@ -122,7 +122,7 @@ export default function Checkout() {
           )}
         </section>
         <Rect />
-        <section ref={sectionRef} id="delivery">
+        <section ref={sectionRef}>
           <div
             className="cursor-pointer text-brown flex justify-between"
             onClick={handleContentToggle}
@@ -188,7 +188,7 @@ export default function Checkout() {
           )}
         </section>
         <Rect />
-        <section ref={sectionRef} id="pay">
+        <section ref={sectionRef}>
           <div
             className="cursor-pointer text-brown flex justify-between"
             onClick={handlePaymentToggle}
