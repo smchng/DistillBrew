@@ -28,13 +28,13 @@ export default function Home() {
         const lastImageBottom = lastImage.offsetTop + lastImage.clientHeight;
 
         // Check if the bottom of the last image is visible
-        if (window.innerHeight + scrollValue >= lastImageBottom) {
-          setShowImages(true);
-          document.body.style.overflow = "hidden"; // Disable scrolling
-        } else {
-          setShowImages(false);
-          document.body.style.overflow = "auto"; // Enable scrolling
-        }
+        // if (window.innerHeight + scrollValue >= lastImageBottom) {
+        //   setShowImages(true);
+        //   document.body.style.overflow = "hidden"; // Disable scrolling
+        // } else {
+        //   setShowImages(false);
+        //   document.body.style.overflow = "auto"; // Enable scrolling
+        // }
       }
     };
 
@@ -75,9 +75,9 @@ export default function Home() {
             SHOP
           </Link>
         </div>
-        <div className="grid grid-cols-3" ref={parallaxRef}>
+        <div className="md:grid md:grid-cols-3" ref={parallaxRef}>
           <div
-            className="object-cover  overflow-hidden relative"
+            className="object-cover hidden md:block overflow-hidden relative"
             data-speed="0.7"
           >
             <Image
@@ -87,7 +87,7 @@ export default function Home() {
             />
           </div>
           <div
-            className="object-cover overflow-hidden relative"
+            className="object-cover overflow-hidden relative hidden md:block"
             data-speed="0.7"
           >
             <Image
