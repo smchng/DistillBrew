@@ -27,10 +27,10 @@ export default function Burner() {
     setIsEnlarged2(false);
     setEnlargedImage2(null);
   };
-  const imageWidth = Math.min(
-    (70 * window.innerWidth) / 100,
-    window.innerWidth
-  );
+  // const imageWidth = Math.min(
+  //   (70 * window.innerWidth) / 100,
+  //   window.innerWidth
+  // );
   return (
     <div className="bg-beige2 pt-[10vh]">
       <ProductDetail
@@ -57,7 +57,7 @@ export default function Burner() {
               <Image
                 src={enlargedImage1 || ""}
                 alt="render"
-                width={imageWidth}
+                width={300}
                 height={200}
                 className="border border-[1px] border-brown bg-white"
               />
@@ -79,7 +79,7 @@ export default function Burner() {
               <Image
                 src={enlargedImage2 || ""}
                 alt="render"
-                width={imageWidth}
+                width={300}
                 height={200}
                 className="border border-[1px] border-brown bg-white"
               />
