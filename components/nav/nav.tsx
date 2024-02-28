@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,6 +27,23 @@ const Nav = () => {
     router.pathname === "/" ||
     router.pathname === "/about" ||
     router.pathname === "/howTo";
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 100;
+
+      setIsScrolled(scrollY > threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="fixed z-50 h-screen bg-grey">
@@ -64,7 +81,9 @@ const Nav = () => {
             onClick={handleToggleOverlay}
             className={`font-semibold text-xs md:text-base ${
               isTargetPage ? "text-white" : "text-brown"
-            }${isMenuPageVisible ? "text-brown" : ""}`}
+            } ${isScrolled && !isMenuPageVisible ? "hidden" : "text-brown"} ${
+              isMenuPageVisible ? "text-brown" : ""
+            }`}
           >
             DISTILL BREW CO.
           </h3>

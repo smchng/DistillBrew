@@ -23,7 +23,11 @@ export const Product = ({
   return (
     <div className={stylingClasses1}>
       <Link href={link}>
-        <Image src={image} alt={alt} className={`${stylingClasses2} `} />
+        <Image
+          src={image}
+          alt={alt}
+          className={`${stylingClasses2} hover:scale-95 transition-transform duration-300 ease-in-out`}
+        />
       </Link>
       <p className="absolute bottom-0 p-[3vw]">{name}</p>
     </div>

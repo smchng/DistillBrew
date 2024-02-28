@@ -24,7 +24,7 @@ export default function Confirm() {
             </div>
             <div className="ml-auto px-[5vw]">
               <Link href="/checkout" className="text-sm text-light">
-                Edit
+                <p>Edit</p>
               </Link>
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function Confirm() {
             </div>
             <div className="ml-auto px-[5vw]">
               <Link href="/checkout" className="text-sm text-light">
-                Edit
+                <p>Edit</p>
               </Link>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function Confirm() {
             </div>
             <div className="ml-auto px-[5vw]">
               <Link href="/checkout" className="text-sm text-light">
-                Edit
+                <p>Edit</p>
               </Link>
             </div>
           </div>
