@@ -11,12 +11,12 @@ import filter from "@/public/imgs/filter.png";
 export default function Products() {
   return (
     <div>
-      <div className="bg-beige2 relative h-screen object-cover overflow-hidden  flex items-center">
+      <div className="bg-beige2 relative object-cover overflow-hidden pt-[10vh] flex items-center h-screen lg:h-auto">
         <Link href="/products/set">
           <Image
             src={set}
             alt="Outer Image"
-            className="w-auto h-screen object-cover overflow-hidden relative left-[40vw]"
+            className="w-auto h-[50vh] md:h-screen object-cover overflow-hidden relative left-[40vw] hover:scale-95 transition-transform duration-300 ease-in-out"
           />
         </Link>
 
@@ -42,7 +42,7 @@ export default function Products() {
             link="/products/machine"
             stylingClasses1="bg-beige1 object-cover overflow-hidden relative"
             stylingClasses2="w-full h-full object-cover overflow-hidden top-[50vh] drop-shadow-lg relative"
-            name="Machine"
+            name="Machine - $145"
           />
         </div>
         <div className="flex-1 flex flex-col gap-0">
@@ -53,7 +53,7 @@ export default function Products() {
               link="/products/filter"
               stylingClasses1="w-full h-full bg-blue relative flex items-center"
               stylingClasses2=" drop-shadow-lg"
-              name="Filter"
+              name="Filter - $24"
             />
           </div>
           <div className="flex-1">
@@ -63,7 +63,7 @@ export default function Products() {
               link="/products/burner"
               stylingClasses1="w-full h-full bg-matcha2 relative flex items-center"
               stylingClasses2=" drop-shadow-lg"
-              name="Burner"
+              name="Burner - $50"
             />
           </div>
         </div>

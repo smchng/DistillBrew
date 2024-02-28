@@ -19,9 +19,9 @@ export const ProductDetail = ({
   detail,
 }: ProductProp) => {
   return (
-    <div className="flex items-center justify-center md:max-w-[80vw] m-auto mb-[20vh]">
+    <div className="flex items-center justify-center md:max-w-[80vw] m-auto my-[10vh]">
       <div className="grid sm:grid-cols-2 px-[5vw]">
-        <div className="w-[90%]">
+        <div className="w-[90%] ">
           <Image src={image} alt={alt} />
         </div>
         <div className="bottom-0 m-auto">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import banner from "@/public/imgs/siphonInt2.png";
 import siphon from "@/public/imgs/siphon.png";
+import arrow from "@/public/svg/Subtract.svg";
 import { FullButton } from "@/components/button/button";
 
 export default function Home() {
@@ -68,14 +69,31 @@ export default function Home() {
       <section className="h-screen object-cover overflow-hidden bg-brown3">
         <h2 className="text-white text-center pt-[5vh]">Siphon</h2>
         <div className="flex space-x-5 justify-center text-white ">
-          <Link href="/howTo" className="z-10">
-            LEARN MORE
-          </Link>
-          <Link href="/products" className="z-10">
-            SHOP
-          </Link>
+          <span className="flex items-start space-x-2">
+            {" "}
+            <Link href="/howTo" className="z-10">
+              LEARN MORE
+            </Link>
+            <Image
+              src={arrow.src}
+              alt="arrow"
+              width={arrow.width}
+              height={arrow.height}
+            />
+          </span>
+          <span className="flex items-start space-x-2">
+            <Link href="/products" className="z-10">
+              SHOP
+            </Link>
+            <Image
+              src={arrow.src}
+              alt="arrow"
+              width={arrow.width}
+              height={arrow.height}
+            />
+          </span>
         </div>
-        <div className="md:grid md:grid-cols-3" ref={parallaxRef}>
+        <div className="lg:grid lg:grid-cols-3" ref={parallaxRef}>
           <div
             className="object-cover hidden md:block overflow-hidden relative"
             data-speed="0.7"

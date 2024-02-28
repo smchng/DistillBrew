@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FullButton } from "@/components/button/button";
+import arrow from "@/public/svg/arrow1.svg";
 
 const Footer = () => {
   const footerContent = [
@@ -11,25 +13,9 @@ const Footer = () => {
   ];
   return (
     <div className="bg-brown text-white p-[5vw]">
-      <div className="grid-col-1 grid sm:grid-cols-4 mb-[8vh]">
-        <div className="mb-[4vh]">
-          <h3>Shop</h3>
-          <Link href="/products" className="text-xs">
-            All Products
-          </Link>
-        </div>
-        <div className="mb-[4vh]">
-          <h3>How-To</h3>
-          <Link href="/howTo" className="text-xs">
-            Siphon Basics
-          </Link>
-        </div>
-        <div className="mb-[4vh]">
-          <Link href="/about">
-            <h3>About</h3>
-          </Link>
-        </div>
-        <div className="mb-[4vh]">
+      {" "}
+      <div className="sm:flex">
+        <div className="mb-[4vh] w-full">
           <h3>Subscribe</h3>
           <FullButton
             text="EMAIL ADDRESS"
@@ -38,23 +24,42 @@ const Footer = () => {
             textColour="text-white  hover:text-brown"
           />
         </div>
-      </div>
-      <div className="grid-col-1 grid sm:grid sm:grid-cols-4  mb-[8vh]">
-        <div className="mb-[4vh]">
-          <Link href="/blog" className="text-xs">
-            <h3> What's New</h3>
-          </Link>
-        </div>
-        <div className="mb-[4vh]">
-          <Link href="/contact" className="text-xs">
-            <h3> Contact Us</h3>
-          </Link>
+        <div className="sm:flex sm:space-x-[10vw] sm:justify-center w-full">
+          <div className=" mt-[3vh]">
+            <p className="font-bold">Distill</p>
+            <Link href="/products">
+              <p className="text-xs"> All Products</p>
+            </Link>
+            <Link href="/about">
+              <p className="text-xs"> About</p>
+            </Link>
+            <Link href="/contact">
+              <p className="text-xs">Contact Us</p>
+            </Link>
+            <Link href="/howTo">
+              <p className="text-xs">Siphon Basics</p>
+            </Link>
+            <Link href="/blog">
+              <p className="text-xs">What's New</p>
+            </Link>
+          </div>
+          <div className=" mt-[3vh]">
+            <p className="font-bold">Help</p>
+            <Link href="/products">
+              <p className="text-xs">Shipping</p>
+            </Link>
+            <Link href="/about">
+              <p className="text-xs">Return</p>
+            </Link>
+            <Link href="/contact">
+              <p className="text-xs">FAQ</p>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="md:flex justify-between mb-[8vh]"></div>
-
       <hr />
-      <p className="mt-[3vh]">©Distill Brew Co.</p>
+      <p className="mt-[3vh]">© 2024 Distill Brew Co.</p>
     </div>
   );
 };

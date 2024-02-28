@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
@@ -28,6 +28,23 @@ const Nav = () => {
     router.pathname === "/about" ||
     router.pathname === "/howTo";
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 100;
+
+      setIsScrolled(scrollY > threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="fixed z-50 h-screen bg-grey">
       {isMenuPageVisible && (
@@ -43,7 +60,7 @@ const Nav = () => {
           <Bean
             fill={isBeanHovered ? "white" : "#391F06"}
             iconFill={isBeanHovered ? "#391F06" : "white"}
-            stylingClasses1="cursor-pointer z-50 absolute left-1/2 top-1/2 w-11 -translate-x-1/2 -translate-y-1/2 transform"
+            stylingClasses1="cursor-pointer z-50 absolute left-1/2 top-1/2 w-8 -translate-x-1/2 -translate-y-1/2 transform"
             stylingClasses2="transition-colors"
           />
 
@@ -64,7 +81,9 @@ const Nav = () => {
             onClick={handleToggleOverlay}
             className={`font-semibold text-xs md:text-base ${
               isTargetPage ? "text-white" : "text-brown"
-            }${isMenuPageVisible ? "text-brown" : ""}`}
+            } ${isScrolled && !isMenuPageVisible ? "hidden" : "text-brown"} ${
+              isMenuPageVisible ? "text-brown" : ""
+            }`}
           >
             DISTILL BREW CO.
           </h3>
@@ -81,7 +100,7 @@ const Nav = () => {
             <Cart
               fill={isCartHovered ? "white" : "#391F06"}
               iconFill={isCartHovered ? "#391F06" : "white"}
-              stylingClasses1=" z-50 absolute w-11 transform translate-x-8 -translate-y-1/2"
+              stylingClasses1=" z-50 absolute w-8 transform translate-x-4 -translate-y-1/2"
               stylingClasses2="transition-colors"
             />
           </Link>
