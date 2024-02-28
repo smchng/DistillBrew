@@ -8,25 +8,13 @@ export default function Confirm() {
       <div className="text-brown">
         <Header title="order confirmation" />
       </div>
+      <p className="pl-[5vw]">
+        Thank you for your order. Your order confirmation has been sent to your
+        email.
+      </p>
       <div>
         <div className="border-b border-white mx-[3vw]"></div>
-        <div>
-          <CartItem image={machine} title="Siphon Machine" price="$145" />
-          <CartItem image={machine} title="Siphon Machine" price="$145" />
-          <CartItem image={machine} title="Siphon Machine" price="$145" />
-        </div>
-        <div className="flex justify-center sm:justify-end sm:pr-[5vw]">
-          <div className="flex flex-col ">
-            <TotalItem title="subtotal" price="$360 CAD" />
-            <TotalItem title="tax" price="$50 CAD" />
-            <TotalItem title="shipping" price="$16 CAD" />
 
-            <div className="text-right grid grid-cols-2 mx-auto gap-[5vw] my-[3vh]">
-              <p>total</p>
-              <p className="font-bold">$391 CAD</p>
-            </div>
-          </div>
-        </div>
         <div className="flex gap-1 bg-white my-[3vh] pl-[3vw] py-[2vh] ">
           <div className="flex w-full">
             <div>
@@ -70,6 +58,12 @@ export default function Confirm() {
               </Link>
             </div>
           </div>
+        </div>
+        <div>
+          <h3 className="pl-[3vw]">items</h3>
+          <CartItem image={machine} title="Siphon Machine" price="$145" />
+          <CartItem image={machine} title="Siphon Machine" price="$145" />
+          <CartItem image={machine} title="Siphon Machine" price="$145" />
         </div>
       </div>
     </div>

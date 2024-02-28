@@ -43,7 +43,7 @@ const Nav = () => {
           <Bean
             fill={isBeanHovered ? "white" : "#391F06"}
             iconFill={isBeanHovered ? "#391F06" : "white"}
-            stylingClasses1="cursor-pointer z-50 absolute left-1/2 top-1/2 w-11 -translate-x-1/2 -translate-y-1/2 transform"
+            stylingClasses1="cursor-pointer z-50 absolute left-1/2 top-1/2 w-8 -translate-x-1/2 -translate-y-1/2 transform"
             stylingClasses2="transition-colors"
           />
 
@@ -81,7 +81,7 @@ const Nav = () => {
             <Cart
               fill={isCartHovered ? "white" : "#391F06"}
               iconFill={isCartHovered ? "#391F06" : "white"}
-              stylingClasses1=" z-50 absolute w-11 transform translate-x-8 -translate-y-1/2"
+              stylingClasses1=" z-50 absolute w-8 transform translate-x-4 -translate-y-1/2"
               stylingClasses2="transition-colors"
             />
           </Link>
