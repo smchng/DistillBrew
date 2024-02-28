@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FullButton } from "@/components/button/button";
+import arrow from "@/public/svg/arrow1.svg";
 
 const Footer = () => {
   const footerContent = [

@@ -86,7 +86,7 @@ export default function Blog() {
             Hear from our customers
           </h2>
         </div>
-        <Marquee className="overflow-visible p-16" autoFill>
+        <Marquee className="overflow-visible p-16" autoFill pauseOnHover>
           <div className="flex">
             {ReviewItems.map((item, index) => (
               <Reviews
