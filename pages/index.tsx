@@ -53,7 +53,7 @@ export default function Home() {
           className="h-screen object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className=" max-w-[80vw] text-white  text-[40px] md:text-[50px]">
+          <h1 className=" text-white leading-none text-[40px] md:text-[50px]">
             Every cup matters
           </h1>
           <p className=" max-w-[80vw] md:max-w-[40vw] text-white max-w-[40vw]  pb-[3vh]  text-[18px] md:text-[20px]">

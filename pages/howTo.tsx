@@ -132,10 +132,12 @@ export default function Home() {
           />
         ))}
       </div>
-      <InstructionDots
-        totalItems={totalItemsWithBanner}
-        activeIndex={activeIndex}
-      />
+      <div className="hidden md:block">
+        <InstructionDots
+          totalItems={totalItemsWithBanner}
+          activeIndex={activeIndex}
+        />
+      </div>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export const ProductDetail = ({
             <p className="text-[25px]">{title}</p>
             <p className="font-bold">{price}</p>
           </div>
-          <p className="max-w-[80%] text-2xs md:text-xs">{detail}</p>
+          <p className="sm:max-w-[80%] text-2xs md:text-xs">{detail}</p>
           <div className="my-[1vw]">
             <p className="text-2xs">QUANTITY</p>
             <Toggle />
