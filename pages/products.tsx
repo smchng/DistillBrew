@@ -24,13 +24,15 @@ export default function Products() {
             textColour="text-white  hover:text-brown"
           />
         </div>{" "}
-        <Link href="/products/set">
-          <Image
-            src={set}
-            alt="Outer Image"
-            className="w-auto h-[50vh] md:h-screen object-cover overflow-hidden relative left-[40vw] top-[-10vh] md:top-0 hover:scale-95 transition-transform duration-300 ease-in-out"
-          />
-        </Link>
+        <div className="flex justify-end w-full">
+          <Link href="/products/set">
+            <Image
+              src={set}
+              alt="Outer Image"
+              className="w-auto h-[50vh] md:h-[80vh] lg:h-screen object-cover overflow-hidden relative  sm:top-[-10vh] md:top-0 hover:scale-95 transition-transform duration-300 ease-in-out"
+            />
+          </Link>
+        </div>
       </div>
 
       <div className="sm:flex">

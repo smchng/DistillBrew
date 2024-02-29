@@ -27,7 +27,9 @@ export default function blogPost() {
   ];
   return (
     <div className="py-[20vh] px-[5vw]">
-      <h2 className="text-brown">Denman location opening soon</h2>
+      <h2 className="text-brown md:text-lg text-[30px]">
+        Denman location opening soon
+      </h2>
       <p className="pb-[2vh]">Posted: February 12, 2024</p>
 
       <Image
@@ -35,7 +37,7 @@ export default function blogPost() {
         alt="location"
         className="object-cover max-w-[80vw] h-[60vh] rounded-2xl "
       />
-      <p className=" py-[8vh] max-w-[80vw]">
+      <p className="text-xs md:text-base py-[8vh] max-w-[80vw]">
         We are happy to announce that our first in-person location is slated to
         open in Summer 2024! Since 2018, we have been dedicated to helping
         create incredible brewing experiences around the world, but it’s time to
@@ -45,7 +47,9 @@ export default function blogPost() {
       </p>
       <div className="">
         <div>
-          <h2 className="text-brown py-[8vh]">What's brewing</h2>
+          <h2 className="text-brown pt-[8vh] pb-[4vh] md:text-lg text-[30px]">
+            What's brewing
+          </h2>
         </div>
         <div className="lg:grid lg:grid-cols-3 lg:gap-[3vw]">
           {BlogItems.map((item, index) => (
