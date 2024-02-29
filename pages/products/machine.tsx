@@ -14,11 +14,15 @@ export default function Machine() {
       />
       <div>
         <div className="grid grid-cols-2">
-          <Image
-            src={siphon}
-            alt="render"
-            className="border border-[1px] border-brown"
-          />
+          <video
+            className="h-full w-auto overflow-hidden object-cover border border-[1px] border-brown bg-white"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/vid/coffee.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <Image
             src={siphon}
             alt="render"

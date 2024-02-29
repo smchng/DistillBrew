@@ -43,24 +43,34 @@ export default function Burner() {
 
       <div className="grid grid-cols-2">
         <div className="relative">
-          <Image
-            src={burner}
-            alt="render"
-            className={`border border-[1px] border-brown cursor-pointer `}
-            onClick={() => handleImageClick1()}
-          />
+          <video
+            className="h-full w-auto overflow-hidden object-cover border border-[1px] border-brown"
+            autoPlay
+            muted
+            loop
+            onClick={() => handleImageClick2()}
+          >
+            <source src="/vid/coffee.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           {isEnlarged1 && (
             <div
               className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white bg-opacity-50 z-10"
               onClick={handleCloseEnlarged1}
             >
-              <Image
-                src={enlargedImage1 || ""}
-                alt="render"
-                width={300}
-                height={200}
-                className="border border-[1px] border-brown bg-white"
-              />
+              <video
+                className="h-full w-auto overflow-hidden object-cover border border-[1px] border-brown"
+                controls
+                autoPlay
+                muted
+                loop
+              >
+                <source
+                  src="https://docs.material-tailwind.com/demo.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
           )}
         </div>

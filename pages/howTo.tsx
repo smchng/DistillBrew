@@ -15,31 +15,31 @@ export default function Home() {
       image: siphon,
       alt: "bar or siphons",
       title: "Filter",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: "Insert a cloth filter into the top chamber of the siphon machine. Ensure that it is locked into place and clean for every use.",
     },
     {
       image: front,
       alt: "cafe front",
       title: "Water",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: "Fill the bottom chamber with water. For every 7 grams of coffee, add 100mL of water. To brew a single cup of coffee, we suggest using 25 grams of coffee with 350mL of water. After adding the water, insert the top chamber into the bottom, ensuring it is firmly sealed together. ",
     },
     {
       image: chair,
       alt: "cafe interior",
       title: "Boil",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: "Place the burner under the bottom chamber and turn the burner on high to bring the water to a boil. Make sure the fire is 5-10mm away from the bottom glass. As the water heats up, it will rise to the top chamber.",
     },
     {
       image: shelf,
       alt: "bar or siphons",
       title: "Coffee",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: "Add the coffee grounds to the water in the top chamber. For a single cup, use 25 grams of coffee grounds. Stir the water with a wooden stirrer to saturate the grinds. Allow the coffee to brew for around 90 seconds.",
     },
     {
       image: bench,
       alt: "front of cafe",
       title: "Enjoy",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: "Turn off the burner and allow the coffee to be filter down into the bottom chamber. Detach the top chamber from the bottom chamber and pour out the coffee. Sit down and enjoy your perfectly brewed coffee.",
     },
   ];
   const nextSectionRef = useRef<HTMLDivElement>(null);
