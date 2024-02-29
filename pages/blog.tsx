@@ -59,14 +59,16 @@ export default function Blog() {
           alt="location"
           className="object-cover w-full h-full"
         />
-        <h3 className="absolute bottom-0 left-0 p-8 text-white sm:max-w-[60vw] leading-none text-lg">
+        <h3 className="absolute bottom-0 left-0 p-8 text-white sm:max-w-[60vw] leading-none md:text-lg">
           Denman location opening soon
         </h3>
       </div>
 
       <div className="px-[5vw]">
         <div>
-          <h2 className="text-brown py-[8vh]  text-[40px]">What's brewing</h2>
+          <h2 className="text-brown py-[8vh] md:text-lg text-[30px]">
+            What's brewing
+          </h2>
         </div>
         <div className="lg:grid lg:grid-cols-3 lg:gap-[3vw]">
           {BlogItems.map((item, index) => (
@@ -82,7 +84,7 @@ export default function Blog() {
       </div>
       <div>
         <div>
-          <h2 className="text-brown py-[10vh] text-center text-[40px]">
+          <h2 className="text-brown pt-[10vh] text-center md:text-lg text-[30px]">
             Hear from our customers
           </h2>
         </div>

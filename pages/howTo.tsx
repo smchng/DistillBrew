@@ -107,9 +107,11 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
           <div
             onClick={handleScroll}
-            className="absolute max-w-[80vw] lg:max-w-[25vw] text-white leading-none text-center"
+            className="absolute max-w-[80vw] lg:max-w-[35vw] text-white leading-none text-center"
           >
-            <h1 className="pb-[2vh]">Learn the art of siphon brewing</h1>
+            <h1 className="pb-[2vh] text-[30px] md:text-[50px]">
+              Learn the art of siphon brewing
+            </h1>
             <SubButton
               text="BEGIN YOUR JOURNEY"
               colour="hover:bg-brown"

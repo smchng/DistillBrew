@@ -53,8 +53,10 @@ export default function Home() {
           className="h-screen object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className=" max-w-[60vw] text-white">Every cup matters</h1>
-          <p className=" max-w-[40vw] text-white max-w-[40vw]  pb-[3vh]">
+          <h1 className=" max-w-[80vw] text-white  text-[40px] md:text-[50px]">
+            Every cup matters
+          </h1>
+          <p className=" max-w-[80vw] md:max-w-[40vw] text-white max-w-[40vw]  pb-[3vh]  text-[18px] md:text-[20px]">
             At Distill Brew Co., it’s not just a cup of coffee. You deserve a
             high-quality coffee experience every day. We can help you there.
           </p>
@@ -93,7 +95,7 @@ export default function Home() {
             />
           </span>
         </div>
-        <div className="lg:grid lg:grid-cols-3" ref={parallaxRef}>
+        <div className="lg:grid lg:grid-cols-3">
           <div
             className="object-cover hidden md:block overflow-hidden relative"
             data-speed="0.7"
@@ -115,13 +117,13 @@ export default function Home() {
             />
           </div>
           <div
-            className="object-cover overflow-hidden relative"
+            className="object-cover overflow-hidden relative justify-center flex"
             data-speed="0.7"
           >
             <Image
               src={siphon}
               alt="siphon machine"
-              className="w-full h-full object-cover overflow-hidden drop-shadow-xl relative"
+              className="w-[60%] md:w-full h-full object-cover overflow-hidden drop-shadow-xl relative"
             />
           </div>
         </div>

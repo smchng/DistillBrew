@@ -66,7 +66,7 @@ export default function Checkout() {
           <CartItem image={machine} title="Siphon Machine" price="$145" />
           <CartItem image={machine} title="Siphon Machine" price="$145" />
         </div>
-        <div className="flex justify-center sm:justify-end sm:pr-[5vw]">
+        <div className="flex justify-end sm:pr-[5vw]">
           <div className="flex flex-col ">
             <TotalItem title="subtotal" price="$360 CAD" />
             <TotalItem title="tax" price="$50 CAD" />

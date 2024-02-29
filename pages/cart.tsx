@@ -13,7 +13,7 @@ export default function Cart() {
         <CartItem image={machine} title="Siphon Machine" price="$145" />
         <CartItem image={machine} title="Siphon Machine" price="$145" />
       </div>
-      <div className="flex justify-center sm:justify-end sm:pr-[5vw]">
+      <div className="flex justify-end md:pr-[5vw]">
         <div className="flex flex-col ">
           <TotalItem title="subtotal" price="$360 CAD" />
           <TotalItem title="tax" price="$50 CAD" />
@@ -25,7 +25,7 @@ export default function Cart() {
           </div>
         </div>
       </div>
-      <div className="pb-[2vh] sm:pr-[5vw] flex justify-center sm:justify-end">
+      <div className="pb-[2vh] md:pr-[5vw] flex  justify-end">
         <div className="flex space-x-5">
           <FullButton
             text="CONTINUE SHOPPING"

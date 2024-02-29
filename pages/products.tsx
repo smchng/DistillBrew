@@ -11,16 +11,8 @@ import filter from "@/public/imgs/filter.png";
 export default function Products() {
   return (
     <div>
-      <div className="bg-beige2 relative object-cover overflow-hidden pt-[10vh] flex items-center h-screen lg:h-auto">
-        <Link href="/products/set">
-          <Image
-            src={set}
-            alt="Outer Image"
-            className="w-auto h-[50vh] md:h-screen object-cover overflow-hidden relative left-[40vw] hover:scale-95 transition-transform duration-300 ease-in-out"
-          />
-        </Link>
-
-        <div className="absolute max-w-[40vw] pl-[10vw] ">
+      <div className="bg-beige2 relative object-cover overflow-hidden pt-[10vh] md:flex items-center h-screen lg:h-auto">
+        <div className="md:absolute max-w-[40vw] pl-[10vw] pt-[10vw] md:pt-0">
           <h2 className=" font-bold">
             Siphon <br />
             Set
@@ -31,7 +23,14 @@ export default function Products() {
             colour="bg-brown hover:bg-white"
             textColour="text-white  hover:text-brown"
           />
-        </div>
+        </div>{" "}
+        <Link href="/products/set">
+          <Image
+            src={set}
+            alt="Outer Image"
+            className="w-auto h-[50vh] md:h-screen object-cover overflow-hidden relative left-[40vw] top-[-10vh] md:top-0 hover:scale-95 transition-transform duration-300 ease-in-out"
+          />
+        </Link>
       </div>
 
       <div className="sm:flex">
@@ -41,7 +40,7 @@ export default function Products() {
             alt="Outer Image"
             link="/products/machine"
             stylingClasses1="bg-beige1 object-cover overflow-hidden relative"
-            stylingClasses2="w-full h-full object-cover overflow-hidden top-[50vh] drop-shadow-lg relative"
+            stylingClasses2="w-full h-full object-cover overflow-hidden md:top-[50vh] drop-shadow-lg relative"
             name="Machine - $56"
           />
         </div>

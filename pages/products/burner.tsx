@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ProductDetail } from "@/components/product/productDetails";
 import burner from "@/public/imgs/burner.png";
+// import vid1 from "@/public/vid/coffee.mp4";
 
 export default function Burner() {
   const [isEnlarged1, setIsEnlarged1] = useState(false);
@@ -48,7 +49,7 @@ export default function Burner() {
             autoPlay
             muted
             loop
-            onClick={() => handleImageClick2()}
+            onClick={() => handleImageClick1()}
           >
             <source src="/vid/coffee.mp4" type="video/mp4" />
             Your browser does not support the video tag.
