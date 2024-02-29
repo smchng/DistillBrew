@@ -42,7 +42,7 @@ export default function Products() {
             link="/products/machine"
             stylingClasses1="bg-beige1 object-cover overflow-hidden relative"
             stylingClasses2="w-full h-full object-cover overflow-hidden top-[50vh] drop-shadow-lg relative"
-            name="Machine - $145"
+            name="Machine - $56"
           />
         </div>
         <div className="flex-1 flex flex-col gap-0">
