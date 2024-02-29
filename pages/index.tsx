@@ -123,7 +123,7 @@ export default function Home() {
             <Image
               src={siphon}
               alt="siphon machine"
-              className="w-[60%] md:w-full h-full object-cover overflow-hidden drop-shadow-xl relative"
+              className="w-full h-full object-cover overflow-hidden drop-shadow-xl relative"
             />
           </div>
         </div>
