@@ -24,7 +24,7 @@ export const ProductDetail = ({
   return (
     <div>
       <Link href="/products">
-        <p className="p-[3vw] mt-[10vh]">back</p>
+        <p className="p-[3vw] mt-[10vh] hover:text-mocha">back</p>
       </Link>
       <div className="flex items-center justify-center md:max-w-[80vw] m-auto mb-[10vh]">
         <div className="grid sm:grid-cols-2 px-[5vw]">

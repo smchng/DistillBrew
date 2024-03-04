@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { CartItemFinal, TotalItem, Header } from "@/components/cart/item";
 import machine from "@/public/imgs/siphon2.png";
-import { FullButton } from "@/components/button/button";
 
 export default function Confirm() {
   return (
@@ -67,13 +66,8 @@ export default function Confirm() {
           <CartItemFinal image={machine} title="Siphon Machine" price="$145" />
         </div>
       </div>
-      <div className=" justify-center flex ">
-        <FullButton
-          text="BACK TO HOME"
-          link="/"
-          colour="bg-brown hover:bg-white"
-          textColour="text-white  hover:text-brown"
-        />
+      <div className=" justify-center flex hover:text-mocha">
+        <Link href="/">back to home</Link>
       </div>
     </div>
   );
