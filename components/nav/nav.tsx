@@ -46,7 +46,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className="fixed z-50 h-screen bg-grey">
+    <div className="fixed z-10 h-screen bg-grey">
       {isMenuPageVisible && (
         <Menu onClose={() => setMenuPageVisibility(false)} />
       )}
@@ -79,7 +79,7 @@ const Nav = () => {
         >
           <h3
             onClick={handleToggleOverlay}
-            className={`font-semibold text-xs md:text-base ${
+            className={`z-[10] font-semibold text-xs md:text-base ${
               isTargetPage ? "text-white" : "text-brown"
             } ${isScrolled && !isMenuPageVisible ? "hidden" : "text-brown"} ${
               isMenuPageVisible ? "text-brown" : ""

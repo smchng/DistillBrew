@@ -47,6 +47,26 @@ export const CartItem = ({ image, title, price }: ItemProps) => {
   );
 };
 
+export const CartItemFinal = ({ image, title, price }: ItemProps) => {
+  const resolvedImage = image !== undefined ? image : "";
+  return (
+    <>
+      <div className="flex gap-1 bg-white my-[3vh] pl-[3vw] py-[2vh] ">
+        <div className="overflow-hidden rounded-lg bg-beige2 w-[100px] h-[100px]">
+          <Image src={resolvedImage} alt="cart item" />
+        </div>
+        <div className=" m-auto px-[5vw] w-full">
+          <p className="text-sm leading-none ">{title}</p>
+
+          <h4 className="font-bold md:text-sm text-xs items-end">
+            {price} CAD
+          </h4>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export const TotalItem = ({ title, price }: ItemProps) => {
   return (
     <div className="text-right grid grid-cols-2 mx-auto gap-[5vw]">

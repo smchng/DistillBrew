@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FullButton } from "@/components/button/button";
 import arrow from "@/public/svg/arrow1.svg";
+import { Input } from "@/components/cart/item";
 
 const Footer = () => {
   const footerContent = [
@@ -17,16 +18,24 @@ const Footer = () => {
       <div className="sm:flex">
         <div className="mb-[4vh] w-full">
           <h3>Subscribe</h3>
-          <FullButton
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="email"
+            className="text-xs bg-brown rounded-full border border-2 border-white p-1 px-3 outline-none"
+          />
+
+          {/* <FullButton
             text="EMAIL ADDRESS"
             link="mailto:s.chng02@gmail.prettierrc.js.com"
             colour="bg-brown hover:bg-white"
             textColour="text-white  hover:text-brown"
-          />
+          /> */}
         </div>
         <div className="sm:flex sm:space-x-[10vw] sm:justify-center w-full">
           <div className=" mt-[3vh]">
-            <p className="font-bold">Distill</p>
+            <h3>Distill</h3>
             <Link href="/products">
               <p className="text-xs"> All Products</p>
             </Link>
@@ -44,7 +53,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className=" mt-[3vh]">
-            <p className="font-bold">Help</p>
+            <h3>Help</h3>
             <Link href="/products">
               <p className="text-xs">Shipping</p>
             </Link>

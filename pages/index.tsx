@@ -7,43 +7,6 @@ import arrow from "@/public/svg/Subtract.svg";
 import { FullButton } from "@/components/button/button";
 
 export default function Home() {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-  const [showImages, setShowImages] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrollValue = window.scrollY;
-        const parallaxElements = Array.from(
-          parallaxRef.current.children
-        ) as HTMLElement[];
-
-        for (const element of parallaxElements) {
-          const speed = parseFloat(element.getAttribute("data-speed") || "1");
-          const translateY = scrollValue * speed;
-          const Y = translateY * -1;
-          element.style.transform = `translateY(${Y}px)`;
-        }
-
-        const lastImage = parallaxElements[parallaxElements.length - 1];
-        const lastImageBottom = lastImage.offsetTop + lastImage.clientHeight;
-
-        // Check if the bottom of the last image is visible
-        // if (window.innerHeight + scrollValue >= lastImageBottom) {
-        //   setShowImages(true);
-        //   document.body.style.overflow = "hidden"; // Disable scrolling
-        // } else {
-        //   setShowImages(false);
-        //   document.body.style.overflow = "auto"; // Enable scrolling
-        // }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <main className={"bg-grey"}>
       <section className="relative">
@@ -68,14 +31,12 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="h-screen object-cover overflow-hidden bg-brown3">
+      <section className=" sm:h-screen object-cover overflow-hidden bg-brown3">
         <h2 className="text-white text-center pt-[5vh]">Siphon</h2>
         <div className="flex space-x-5 justify-center text-white ">
-          <span className="flex items-start space-x-2">
+          <span className="flex items-start space-x-2 hover:text-mocha">
             {" "}
-            <Link href="/howTo" className="z-10">
-              LEARN MORE
-            </Link>
+            <Link href="/howTo">LEARN MORE</Link>
             <Image
               src={arrow.src}
               alt="arrow"
@@ -83,10 +44,8 @@ export default function Home() {
               height={arrow.height}
             />
           </span>
-          <span className="flex items-start space-x-2">
-            <Link href="/products" className="z-10">
-              SHOP
-            </Link>
+          <span className="flex items-start space-x-2 hover:text-mocha">
+            <Link href="/products">SHOP</Link>
             <Image
               src={arrow.src}
               alt="arrow"

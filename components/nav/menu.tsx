@@ -15,6 +15,7 @@ const Menu: React.FC<MenuPageProps> = ({ onClose }) => {
     onClose(); // Notify the parent component to close the menu page
   };
   const MenuItem = [
+    { item: "Home", link: "/" },
     { item: "Shop", link: "/products" },
     { item: "About", link: "/about" },
     { item: "How To", link: "/howTo" },
