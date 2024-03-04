@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Intruction, InstructionDots } from "@/components/instruction";
+import { Intruction, InstructionDots } from "@/components/howTo/instruction";
 import { SubButton } from "@/components/button/button";
 import React, { useState, useEffect, useRef } from "react";
 import dSiphon from "@/public/imgs/3dSiphon.png";
@@ -9,7 +9,9 @@ import chair from "@/public/imgs/chair.png";
 import front from "@/public/imgs/front.png";
 import shelf from "@/public/imgs/shelf.png";
 
-export default function Home() {
+import Render from "@/components/howTo/render";
+
+export default function HowTo() {
   const instructionItem = [
     {
       image: siphon,
@@ -96,8 +98,10 @@ export default function Home() {
       window.removeEventListener("scroll", handleDotScroll);
     };
   }, []);
+
   return (
     <div>
+      <Render />
       <div className="relative">
         <Image
           src={dSiphon}
