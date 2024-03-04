@@ -84,7 +84,7 @@ export const ProductVid = ({ title, detail }: ProductProp) => {
           onClick={handleCloseEnlarged1}
         >
           <video
-            className="h-[70vh] w-auto overflow-hidden object-cover border border-[1px] border-brown bg-beige1"
+            className="w-[80vw] md:w-auto md:h-[70vh] w-auto overflow-hidden object-cover border border-[1px] border-brown bg-beige1"
             autoPlay
             muted
             loop
