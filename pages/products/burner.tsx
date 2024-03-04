@@ -13,7 +13,7 @@ export default function Burner() {
         price="20.00 CAD"
         detail="Our sleek butane Burner made with durable stainless steel makes it the perfect match for Siphon Coffee Machines. With a capability of reaching 1200°C/2100°F max., our lightweight Burner is sure to brew a perfect cup of coffee."
       />
-      <ProductVid title="/vid/filter.webm" detail="video/webm" />
+      <ProductVid title="/vid/burner.webm" detail="video/webm" />
     </div>
   );
 }
