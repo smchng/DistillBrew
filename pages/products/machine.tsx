@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ProductDetail } from "@/components/product/productDetails";
+import { useState } from "react";
+import { ProductDetail, ProductVid } from "@/components/product/productDetails";
 import siphon from "@/public/imgs/siphon2.png";
 
 export default function Machine() {
@@ -14,26 +15,9 @@ export default function Machine() {
       />
       <div>
         <div className="grid grid-cols-2">
-          <video
-            className="h-full w-auto overflow-hidden object-cover border border-[1px] border-brown bg-white"
-            autoPlay
-            muted
-            loop
-          >
-            <source src="/vid/coffee.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <Image
-            src={siphon}
-            alt="render"
-            className="border border-[1px] border-brown"
-          />
+          <ProductVid title="/vid/water_2.webm" detail="video/webm" />
+          <ProductVid title="/vid/coffee.webm" detail="video/webm" />
         </div>
-        <Image
-          src={siphon}
-          alt="render"
-          className="border border-[1px] border-brown"
-        />
       </div>
     </div>
   );

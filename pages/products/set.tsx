@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProductDetail } from "@/components/product/productDetails";
+import { ProductDetail, ProductVid } from "@/components/product/productDetails";
 import set from "@/public/imgs/fullset.png";
 
 export default function Set() {
@@ -14,17 +14,10 @@ export default function Set() {
       />
 
       <div className="grid grid-cols-2">
-        <Image
-          src={set}
-          alt="render"
-          className="border border-[1px] border-brown"
-        />
-        <Image
-          src={set}
-          alt="render"
-          className="border border-[1px] border-brown"
-        />
+        <ProductVid title="/vid/filter.webm" detail="video/webm" />
+        <ProductVid title="/vid/mug.webm" detail="video/webm" />
       </div>
+      <ProductVid title="/vid/water_2.webm" detail="video/webm" />
     </div>
   );
 }
