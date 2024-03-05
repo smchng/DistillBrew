@@ -13,9 +13,9 @@ export const FullButton = ({ text, link, colour, textColour }: ButtonProp) => {
   return (
     <Link
       href={resolvedLink}
-      className={`${colour}  ${textColour} cursor-pointer text-2xs border rounded-full border-[1.5px] px-[3vw] pt-[1vh] inline-block transition-colors`}
+      className={`${colour}  ${textColour} cursor-pointer border rounded-full border-[1.5px] px-[3vw] pt-[1vh] md:px-5 md:pt-1 inline-block transition-colors`}
     >
-      <p className="text-xs font-bold leading "> {text}</p>
+      <p className="md:text-xs md:font-bold"> {text}</p>
     </Link>
   );
 };
@@ -23,9 +23,9 @@ export const FullButton = ({ text, link, colour, textColour }: ButtonProp) => {
 export const SubButton = ({ text, colour, textColour }: ButtonProp) => {
   return (
     <div
-      className={`${colour}  ${textColour} cursor-pointer text-2xs border rounded-full border-[1.5px] px-[3vw] pt-[1vh] inline-block transition-colors`}
+      className={`${colour}  ${textColour} cursor-pointer border rounded-full border-[1.5px] px-[3vw] pt-[1vh] md:px-5 md:pt-1 inline-block transition-colors`}
     >
-      <p className="text-xs font-bold leading "> {text}</p>
+      <p className="md:text-xs md:font-bold p-1"> {text}</p>
     </div>
   );
 };
