@@ -31,27 +31,27 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className=" sm:h-screen object-cover overflow-hidden bg-brown3">
+      <section className=" sm:h-[150vh] object-cover overflow-hidden bg-brown3">
         <h2 className="text-white text-center pt-[5vh]">Siphon</h2>
         <div className="flex space-x-5 justify-center text-white ">
           <span className="flex items-start space-x-2 hover:text-mocha">
             {" "}
             <Link href="/howTo">LEARN MORE</Link>
-            <Image
+            {/* <Image
               src={arrow.src}
               alt="arrow"
               width={arrow.width}
               height={arrow.height}
-            />
+            /> */}
           </span>
           <span className="flex items-start space-x-2 hover:text-mocha">
             <Link href="/products">SHOP</Link>
-            <Image
+            {/* <Image
               src={arrow.src}
               alt="arrow"
               width={arrow.width}
               height={arrow.height}
-            />
+            /> */}
           </span>
         </div>
         <div className="lg:grid lg:grid-cols-3">

@@ -16,7 +16,11 @@ export default function Checkout() {
   const [isCustomerVisible, setCustomerVisible] = useState(true);
   const [isContentVisible, setContentVisible] = useState(false);
   const [isPaymentVisible, setPaymentVisible] = useState(false);
+  const [isItemVisible, setItemVisible] = useState(false);
 
+  const handleItemToggle = () => {
+    setItemVisible(!isItemVisible);
+  };
   const handleCustomerToggle = () => {
     setCustomerVisible(!isCustomerVisible);
   };
@@ -56,29 +60,44 @@ export default function Checkout() {
 
   return (
     <div className="py-[15vh]">
-      <div className="text-brown">
-        <Header title="items" />
-      </div>
-      <div>
-        <div className="border-b border-white mx-[3vw]"></div>
-        <div>
-          <CartItem image={machine} title="Siphon Machine" price="$145" />
-          <CartItem image={machine} title="Siphon Machine" price="$145" />
-          <CartItem image={machine} title="Siphon Machine" price="$145" />
+      <section ref={sectionRef} id="items">
+        <div
+          className="cursor-pointer text-brown flex justify-between"
+          onClick={handleItemToggle}
+        >
+          <Header title="items" />
+          <Image
+            src={arrow.src}
+            alt="arrow"
+            width={25}
+            height={25}
+            className={`mr-[4vw] ${isItemVisible ? "" : "rotate-180"}`}
+          />
         </div>
-        <div className="flex justify-end sm:pr-[5vw]">
-          <div className="flex flex-col ">
-            <TotalItem title="subtotal" price="$360 CAD" />
-            <TotalItem title="tax" price="$50 CAD" />
-            <TotalItem title="shipping" price="$16 CAD" />
+        {isItemVisible && (
+          <div>
+            <div className="border-b border-white mx-[3vw]"></div>
+            <div>
+              <CartItem image={machine} title="Siphon Machine" price="$145" />
+              <CartItem image={machine} title="Siphon Machine" price="$145" />
+              <CartItem image={machine} title="Siphon Machine" price="$145" />
+            </div>
+            <div className="flex justify-end sm:pr-[5vw]">
+              <div className="flex flex-col ">
+                <TotalItem title="subtotal" price="$360 CAD" />
+                <TotalItem title="tax" price="$50 CAD" />
+                <TotalItem title="shipping" price="$16 CAD" />
 
-            <div className="text-right grid grid-cols-2 mx-auto gap-[5vw] my-[3vh]">
-              <p>total</p>
-              <p className="font-bold">$391 CAD</p>
+                <div className="text-right grid grid-cols-2 mx-auto gap-[5vw] my-[3vh]">
+                  <p>total</p>
+                  <p className="font-bold">$391 CAD</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        )}
+      </section>
+
       <div>
         <Rect />
         <section ref={sectionRef} id="customer">

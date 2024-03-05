@@ -64,7 +64,7 @@ export default function Blog() {
         </h3>
       </div>
 
-      <div className="px-[5vw]">
+      <div className="px-[5vw] md:h-screen  md:flex  md:flex-col   md:justify-center">
         <div>
           <h2 className="text-brown py-[8vh] md:text-lg text-[30px]">
             What's brewing
@@ -82,7 +82,7 @@ export default function Blog() {
           ))}
         </div>
       </div>
-      <div>
+      <div className="h-screen flex flex-col items-center justify-center">
         <div>
           <h2 className="text-brown pt-[10vh] text-center md:text-lg text-[30px]">
             Hear from our customers

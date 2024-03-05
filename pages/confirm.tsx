@@ -5,8 +5,8 @@ import machine from "@/public/imgs/siphon2.png";
 export default function Confirm() {
   return (
     <div className="py-[15vh]">
-      <div className="text-brown">
-        <Header title="order confirmation" />
+      <div className="text-brown pl-[3vh] md:pl-[10vh]">
+        <h2>Order Confirmed!</h2>
       </div>
       <p className="pl-[5vw]">
         Thank you for your order. Your order confirmation has been sent to your
@@ -67,7 +67,9 @@ export default function Confirm() {
         </div>
       </div>
       <div className=" justify-center flex hover:text-mocha">
-        <Link href="/">back to home</Link>
+        <Link href="/">
+          <p>back to home</p>
+        </Link>
       </div>
     </div>
   );

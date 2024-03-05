@@ -37,31 +37,31 @@ const Footer = () => {
           <div className=" mt-[3vh]">
             <h3>Distill</h3>
             <Link href="/products">
-              <p className="text-xs"> All Products</p>
+              <p className="text-xs hover:text-mocha"> All Products</p>
             </Link>
             <Link href="/about">
-              <p className="text-xs"> About</p>
+              <p className="text-xs hover:text-mocha"> About</p>
             </Link>
             <Link href="/contact">
-              <p className="text-xs">Contact Us</p>
+              <p className="text-xs hover:text-mocha">Contact Us</p>
             </Link>
             <Link href="/howTo">
-              <p className="text-xs">Siphon Basics</p>
+              <p className="text-xs hover:text-mocha">Siphon Basics</p>
             </Link>
             <Link href="/blog">
-              <p className="text-xs">What's New</p>
+              <p className="text-xs hover:text-mocha">What's New</p>
             </Link>
           </div>
           <div className=" mt-[3vh]">
             <h3>Help</h3>
             <Link href="/products">
-              <p className="text-xs">Shipping</p>
+              <p className="text-xs hover:text-mocha">Shipping</p>
             </Link>
             <Link href="/about">
-              <p className="text-xs">Return</p>
+              <p className="text-xs hover:text-mocha">Return</p>
             </Link>
             <Link href="/contact">
-              <p className="text-xs">FAQ</p>
+              <p className="text-xs hover:text-mocha">FAQ</p>
             </Link>
           </div>
         </div>

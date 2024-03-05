@@ -12,7 +12,7 @@ export default function Products() {
   return (
     <div>
       <div className="bg-beige2 relative object-cover overflow-hidden pt-[10vh] md:flex items-center h-screen lg:h-auto">
-        <div className="md:absolute max-w-[40vw] pl-[10vw] pt-[10vw] md:pt-0">
+        <div className="md:absolute max-w-[40vw] pl-[15vw] pt-[10vw] md:pt-0">
           <h2 className=" font-bold">
             Siphon <br />
             Set
@@ -29,7 +29,7 @@ export default function Products() {
             <Image
               src={set}
               alt="Outer Image"
-              className="w-auto h-[50vh] md:h-[80vh] lg:h-screen object-cover overflow-hidden relative  sm:top-[-10vh] md:top-0 hover:scale-95 transition-transform duration-300 ease-in-out"
+              className="w-auto h-[50vh] md:h-[80vh] lg:h-screen object-cover overflow-hidden relative right-[10vw] sm:top-[-10vh] md:top-0 hover:scale-95 transition-transform duration-300 ease-in-out"
             />
           </Link>
         </div>
