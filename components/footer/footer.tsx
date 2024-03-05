@@ -63,6 +63,12 @@ const Footer = () => {
             <Link href="/contact">
               <p className="text-xs hover:text-mocha">FAQ</p>
             </Link>
+            <Link href="https://smchng.github.io/339_StyleGuide/">
+              <p className="text-xs hover:text-mocha">Styleguide</p>
+            </Link>
+            <Link href="  https://github.com/smchng/DistillBrew">
+              <p className="text-xs hover:text-mocha">Github</p>
+            </Link>
           </div>
         </div>
       </div>
