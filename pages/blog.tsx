@@ -1,7 +1,10 @@
 import Image from "next/image";
 import front from "@/public/imgs/outer.png";
+
 import { BlogPost, Reviews } from "@/components/blog/blog";
 import Marquee from "react-fast-marquee";
+import siphon from "@/public/imgs/siphonInt.png";
+import shelf from "@/public/imgs/shelf.png";
 
 export default function Blog() {
   const BlogItems = [
@@ -16,14 +19,14 @@ export default function Blog() {
       title: "INNOVATIVE DESIGN",
       text: "In the dynamic world of eCommerce, staying ahead of the curve is essential.",
 
-      image: front,
+      image: shelf,
       alt: "img",
     },
     {
       title: "A NEW BEGINNING",
       text: "Introducing Siphon ExCommerce-the revolutionary platform that's changing the way online businesses operate.",
 
-      image: front,
+      image: siphon,
       alt: "img",
     },
   ];
