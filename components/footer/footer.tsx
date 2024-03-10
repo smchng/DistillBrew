@@ -57,11 +57,11 @@ const Footer = () => {
             <Link href="/products">
               <p className="text-xs hover:text-mocha">Shipping</p>
             </Link>
-            <Link href="/about">
-              <p className="text-xs hover:text-mocha">Return</p>
-            </Link>
             <Link href="/contact">
               <p className="text-xs hover:text-mocha">FAQ</p>
+            </Link>{" "}
+            <Link href="/citation">
+              <p className="text-xs hover:text-mocha">Citation</p>
             </Link>
             <Link href="https://smchng.github.io/339_StyleGuide/">
               <p className="text-xs hover:text-mocha">Styleguide</p>

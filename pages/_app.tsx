@@ -21,6 +21,7 @@ import Set from "@/pages/products/set";
 import Machine from "@/pages/products/machine";
 import Cart from "@/pages/cart";
 import Checkout from "@/pages/checkout";
+import Citation from "@/pages/citation";
 
 export default function App() {
   const router = useRouter();
@@ -65,6 +66,7 @@ export default function App() {
           {currentPage === "/checkout" && <Checkout />}
           {currentPage === "/confirm" && <Confirm />}
           {currentPage === "/sent" && <Sent />}
+          {currentPage === "/citation" && <Citation />}
           {currentPage === "/products/filter" && <Filter />}
           {currentPage === "/products/burner" && <Burner />}
           {currentPage === "/products/set" && <Set />}
